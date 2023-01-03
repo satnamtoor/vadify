@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:dist="http://schemas.android.com/apk/distribution"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.android.vadify">
+
+    <queries>
+        <intent>
+            <action android:name="android.media.action.IMAGE_CAPTURE" />
+        </intent>
+    </queries>
+    <queries> <package android:name="com.google.android.googlequicksearchbox"/> </queries>
+
+    <dist:module dist:instant="true" />
+
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NOTIFICATION_POLICY" />
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT"/>
+
+
+    <application
+        android:hardwareAccelerated="false"
+        android:largeHeap="true"
+        android:name=".VadifyApplication"
+        android:allowBackup="true"
+        android:icon="@drawable/logo"
+        android:label="@string/app_name"
+        android:networkSecurityConfig="@xml/network_security"
+        android:supportsRtl="true"
+        android:requestLegacyExternalStorage="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".ui.chat.camera.CameraActivity" />
+        <activity android:name=".ui.chat.ChatActivity"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".ui.Home"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.HelpSupport"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".ui.Translation"
+            android:screenOrientation="portrait"
+            />
+
+
+        <activity
+            android:name=".ui.dashboard.fragment.call.activity.DirectCallActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name="com.android.vadify.ui.InviteGroup"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan"
+            android:screenOrientation="portrait"
+            />
+
+        <activity
+            android:name=".ui.walktroughdesign.WalkThroughScreen"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.canhub.cropper.CropImageActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/Base.Theme.AppCompat" />
+        <activity
+            android:name=".ui.login.StartUpActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustResize|stateHidden" />
+        <activity
+            android:name=".ui.dashboard.Dashboard"
+            android:fitsSystemWindows="true"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="adjustPan|adjustResize" />
+        <activity
+            android:name=".ui.SplashActivity"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ui.dashboard.activity.EditChatSetting"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.dashboard.activity.NotificationActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.dashboard.activity.BlockedActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.dashboard.activity.EditMyAccountActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.dashboard.activity.EditProfileActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.dashboard.activity.AboutUsActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.dashboard.activity.TermActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.dashboard.activity.PolicyActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity
+            android:name=".ui.contact.ContactActivity"
+            android:windowSoftInputMode="adjustResize|stateHidden|adjustPan"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.dashboard.activity.FaqActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.chat.videoplayer.VideoPlayerActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.dashboard.fragment.changePassword.ChangePasswordActivity"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.chat.contact.UserContactInformation"
+            android:screenOrientation="portrait"
+            />
+        <activity android:name=".ui.chat.call.CallActivity"
+            android:screenOrientation="portrait"
+            android:launchMode="singleTop"
+            android:showOnLockScreen="true"
+            />
+        <activity android:name=".ui.chat.call.videocall.VideoCallActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:showOnLockScreen="true"
+            />
+        <activity android:name=".ui.dashboard.activity.RetakeCommand"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name=".ui.dashboard.activity.ProfileImage"
+            android:screenOrientation="portrait"
+            />
+
+        <activity android:name="com.android.vadify.ui.chat.CreateGroupFragment"
+            android:screenOrientation="portrait"
+            />
+
+
+        <provider
+            android:name="androidx.work.impl.WorkManagerInitializer"
+            android:authorities="com.android.vadify.workmanager-init"
+            android:exported="false"
+            tools:node="remove" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+
+
+        <service
+            android:name=".service.VadifyMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <service android:name=".service.CallNotificationService" />
+        <service android:name=".service.VideoCallNotificationService" />
+
+        <service
+            android:name="androidx.work.impl.foreground.SystemForegroundService"
+            android:foregroundServiceType="location|microphone"
+            tools:node="merge" />
+
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/logo" />
+        <!--
+             Set color used with incoming notification messages. This is used when no color is set for the incoming
+             notification message. See README(https://goo.gl/6BKBk7) for more.
+        -->
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_color"
+            android:resource="@color/colorAccent" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_channel_id"
+            android:value="@string/app_name" />
+
+
+    </application>
+
+</manifest>

@@ -1,0 +1,253 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply plugin: "androidx.navigation.safeargs"
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+apply plugin: 'com.google.firebase.crashlytics'
+
+
+android {
+    compileSdkVersion 31
+    defaultConfig {
+        ndkVersion "21.3.6528147"
+        multiDexEnabled true
+        applicationId 'com.vadify'
+        minSdkVersion 24
+        targetSdkVersion 30
+        versionCode 18
+        versionName "1.0.6"
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+
+    buildTypes {
+
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+
+            ndk {
+                abiFilters "arm64-v8a", "armeabi-v7a"
+            }
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+
+    buildFeatures {
+        dataBinding = true
+    }
+
+
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+
+
+    flavorDimensions 'env'
+    productFlavors {
+        dev {
+            //buildConfigField 'String', 'API_URL', '"http://13.234.13.199:3000"'
+            //buildConfigField 'String', 'API_URL', '"http://13.127.244.97:3333"'
+            buildConfigField 'String', 'API_URL', '"https://api.vadify.com"'
+
+            //buildConfigField 'String', 'API_URL', '"https://qa-api.vadify.com"'
+            // buildConfigField 'String', 'API_URL', '"https://beta.vadify.com"'
+            //   buildConfigField 'String', 'API_URL', '"http://13.127.244.97:3333"'
+            buildConfigField 'String', 'GOOGLE_API_KEY', '"AIzaSyD8vF1efYzyj79atOCeRuaoTwf3MbdEEOI"'
+            buildConfigField 'String', 'GOOGLE_API_URL', '"https://texttospeech.googleapis.com/v1/text:synthesize/"'
+
+        }
+        //https://beta.vadify.com/
+        prod {
+            // buildConfigField 'String', 'API_URL', '"http://13.127.244.97:3333"'
+            // buildConfigField 'String', 'API_URL', '"http://13.234.13.199:3000"'
+            buildConfigField 'String', 'API_URL', '"https://api.vadify.com"'
+            //  buildConfigField 'String', 'API_URL', '"https://qa-api.vadify.com"'
+            //buildConfigField 'String', 'API_URL', '"https://beta.vadify.com"'
+
+            buildConfigField 'String', 'GOOGLE_API_KEY', '"AIzaSyD8vF1efYzyj79atOCeRuaoTwf3MbdEEOI"'
+            buildConfigField 'String', 'GOOGLE_API_URL', '"https://texttospeech.googleapis.com/v1/text:synthesize/"'
+
+        }
+    }
+
+    packagingOptions {
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/INDEX.LIST'
+    }
+
+}
+
+dependencies {
+    implementation 'androidx.vectordrawable:vectordrawable:1.1.0'
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+    implementation 'com.google.android.play:core-ktx:1.8.1'
+    implementation 'androidx.recyclerview:recyclerview:1.2.0'
+    def androidComponents = '370f602f0c'
+    def daggerVersion = '2.23.2'
+
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.constraintlayout:constraintlayout:2.0.4'
+
+    implementation 'androidx.lifecycle:lifecycle-extensions:2.2.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.2.0'
+    implementation 'com.github.mreram:showcaseview:1.4.0'
+    implementation 'com.github.chrisbanes:PhotoView:2.0.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    //material view
+    implementation "com.google.android.material:material:1.2.1"
+
+    //common and uiview library
+    implementation "com.github.davinder12.android-component:common:$androidComponents"
+    implementation "com.github.davinder12.android-component:uiview:$androidComponents"
+
+    // network library
+    implementation 'io.reactivex.rxjava2:rxjava:2.2.19'
+    implementation 'io.reactivex.rxjava2:rxkotlin:2.4.0'
+    implementation 'com.jakewharton.rxbinding3:rxbinding-appcompat:3.1.0'
+    implementation 'androidx.lifecycle:lifecycle-reactivestreams-ktx:2.2.0'
+
+    implementation 'androidx.preference:preference-ktx:1.1.1'
+
+    // implementation 'com.github.mukeshsolanki:android-otpview-pinview:3.0.0\''
+    // retrofit library
+    implementation "com.squareup.retrofit2:retrofit:2.9.0"
+    implementation "com.squareup.retrofit2:converter-gson:2.9.0"
+    implementation 'com.squareup.retrofit2:adapter-rxjava2:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-scalars:2.9.0'
+    implementation "com.squareup.okhttp3:logging-interceptor:4.7.2"
+
+    // dagger setup
+    implementation "com.google.dagger:dagger:$daggerVersion"
+    implementation "com.google.dagger:dagger-android:2.35.1"
+    implementation "com.google.dagger:dagger-android-support:$daggerVersion"
+    kapt "com.google.dagger:dagger-android-processor:$daggerVersion"
+    kapt "com.google.dagger:dagger-compiler:$daggerVersion"
+    // integrate navigation library
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.2'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.2'
+
+    implementation 'com.github.bumptech.glide:glide:4.11.0'
+
+    // pagination library
+    implementation "androidx.paging:paging-runtime-ktx:2.1.2"
+
+    //view page library
+    implementation "androidx.viewpager2:viewpager2:1.0.0"
+
+
+    implementation 'com.android.support:multidex:1.0.3'
+
+//    implementation 'com.theartofdev.edmodo:android-image-cropper:2.8.0'
+    implementation 'com.github.CanHub:Android-Image-Cropper:3.1.1'
+    implementation 'id.zelory:compressor:3.0.0'
+
+
+    //dimension library
+    implementation 'com.intuit.ssp:ssp-android:1.0.6'
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    implementation 'com.github.yesterselga:country-picker-android:1.0'
+
+    implementation 'com.tbuonomo.andrui:viewpagerdotsindicator:4.0'
+
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    //SWIPE TO REVEAL
+    implementation 'com.chauthai.swipereveallayout:swipe-reveal-layout:1.4.1'
+
+    implementation 'com.github.stfalcon:smsverifycatcher:0.3.2'
+
+    implementation 'io.michaelrocks:libphonenumber-android:8.12.11'
+    implementation 'com.afollestad.assent:core:3.0.0-RC4'
+    //implementation project(':swipe-reveal-layout')
+
+
+    // implementation 'se.emilsjolander:stickylistheaders:2.7.0'
+    implementation 'com.github.mtotschnig:stickylistheaders:2.8.0'
+    //implementation 'com.github.mtotschnig:StickyListHeaders:2.7.1'
+    def room_version = "2.2.5"
+    implementation "androidx.room:room-runtime:$room_version"
+    kapt "androidx.room:room-compiler:$room_version"
+    // optional - Kotlin Extensions and Coroutines support for Room
+    implementation "androidx.room:room-ktx:$room_version"
+    // optional - Test helpers
+    testImplementation "androidx.room:room-testing:$room_version"
+
+//    implementation 'com.github.nkzawa:socket.io-client:0.6.0'
+    implementation('io.socket:socket.io-client:1.0.1') {
+        // excluding org.json which is provided by Android
+        exclude group: 'org.json', module: 'json'
+    }
+
+    implementation 'com.google.code.gson:gson:2.8.6'
+
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.3.0'
+
+    //  implementation project(':speech')
+    implementation project(':library')
+    implementation project(':ccp')
+
+
+    implementation('com.google.cloud:google-cloud-translate:1.95.4') {
+        exclude group: "org.threeten", module: "threetenbp"
+    }
+
+    implementation('com.google.cloud:google-cloud-texttospeech:1.2.4') {
+        exclude group: "org.threeten", module: "threetenbp"
+    }
+
+    implementation 'com.google.mlkit:language-id:16.1.1'
+
+    implementation 'net.alhazmy13.MediaPicker:libary:2.4.4'
+
+    implementation platform('com.google.firebase:firebase-bom:26.1.0')
+
+    implementation 'com.google.firebase:firebase-crashlytics'
+    implementation 'com.google.firebase:firebase-analytics'
+    implementation 'com.google.firebase:firebase-messaging:20.2.0'
+
+    implementation "androidx.work:work-runtime-ktx:2.4.0"
+
+    implementation "androidx.work:work-rxjava2:2.4.0"
+    implementation 'com.github.PaulinaSadowska:RxWorkManagerObservers:1.0.0'
+
+    implementation 'com.github.AbedElazizShe:LightCompressor:0.7.7'
+    implementation 'ua.polohalo.zoomabletextureview:zoomabletextureview:1.0.0'
+    implementation 'com.droidninja:filepicker:2.2.5'
+    implementation 'com.jsibbold:zoomage:1.3.1'
+
+    implementation "com.twilio:audioswitch:1.1.0"
+    implementation "com.twilio:video-android:6.1.0"
+
+    implementation 'com.cossacklabs.com:themis:0.13.1'
+    implementation 'com.github.onimur:handle-path-oz:1.0.7'
+
+    def appCenterSdkVersion = '4.1.0'
+    implementation "com.microsoft.appcenter:appcenter-analytics:${appCenterSdkVersion}"
+    implementation "com.microsoft.appcenter:appcenter-crashes:${appCenterSdkVersion}"
+    implementation 'com.github.Lucem-Anb:ZoomableVideo:1.0.0'
+    implementation 'com.google.android.gms:play-services-auth:20.2.0'
+    implementation 'com.google.android.gms:play-services-auth-api-phone:18.0.1'
+    implementation 'com.toptoche.searchablespinner:searchablespinnerlibrary:1.3.1'
+}

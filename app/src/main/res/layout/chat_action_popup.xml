@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_30sdp"
+            app:cardCornerRadius="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_20sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_6sdp"
+                    android:text="More actions"
+                    android:textAppearance="@style/semiBold"
+                    android:textSize="@dimen/_12ssp"
+                    app:layout_constraintBottom_toBottomOf="@+id/closeBtn"
+                    app:layout_constraintEnd_toStartOf="@+id/closeBtn"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/closeBtn" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/deleteChatBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginBottom="@dimen/_24sdp"
+                    android:backgroundTint="@color/red_color"
+                    android:text="@string/delete_chat"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/clearChatBtn"
+                    app:layout_constraintStart_toStartOf="@+id/clearChatBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/blockContactBtn" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/mailBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/contact_info"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/materialButton"
+                    app:layout_constraintStart_toStartOf="@+id/materialButton"
+                    app:layout_constraintTop_toBottomOf="@+id/materialButton" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/materialButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:text="@string/mute"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/closeBtn"
+                    app:layout_constraintStart_toStartOf="@+id/title"
+                    app:layout_constraintTop_toBottomOf="@+id/closeBtn" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/clearChatBtn"
+                    style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:text="@string/clear_chat"
+                    android:textColor="@color/red_color"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintEnd_toEndOf="@+id/mailBtn"
+                    app:layout_constraintStart_toStartOf="@+id/mailBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/mailBtn"
+                    app:strokeColor="@color/red_color"
+                    app:strokeWidth="@dimen/_1sdp" />
+
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/closeBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:padding="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/ic_close" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/blockContactBtn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:backgroundTint="@color/blue"
+                    android:text="@string/block_contact"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="@+id/clearChatBtn"
+                    app:layout_constraintStart_toStartOf="@+id/clearChatBtn"
+                    app:layout_constraintTop_toBottomOf="@+id/clearChatBtn" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</layout>

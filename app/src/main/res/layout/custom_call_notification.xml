@@ -1,0 +1,72 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="#000"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.85"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Caller's Name"
+                android:textColor="#fff"
+                android:textStyle="bold"
+                android:padding="5dp" />
+            <TextView
+                android:textColor="#fff"
+                android:id="@+id/callType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="-10dp"
+                android:padding="5dp"
+                android:text="Incoming call" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/notificationDp"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/logo" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingStart="5dp"
+        android:paddingEnd="5dp">
+        <Button
+            android:background="@color/red_color"
+            android:backgroundTint="@color/red_color"
+            android:id="@+id/btnDecline"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="5dp"
+            android:layout_weight="0.5"
+            android:layout_gravity="center"
+            android:gravity="center"
+
+            android:text="Decline"
+            android:textColor="#fff" />
+        <Button
+            android:background="@color/green_color"
+            android:textColor="#fff"
+            android:id="@+id/btnAnswer"
+            android:layout_width="0dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:layout_weight="0.5"
+            android:backgroundTint="@color/green_color"
+            android:text="Answer"/>
+    </LinearLayout>
+</LinearLayout>

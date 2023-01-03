@@ -1,0 +1,98 @@
+# https://github.com/arturbosch/detekt/blob/master/detekt-cli/src/main/resources/default-detekt-config.yml
+
+autoCorrect: true
+failFast: true
+
+comments:
+  UndocumentedPublicClass:
+    active: false
+  UndocumentedPublicFunction:
+    active: false
+  CommentOverPrivateFunction:
+    active: false
+  CommentOverPrivateProperty:
+    active: false
+  EndOfSentenceFormat:
+    active: false
+
+performance:
+  SpreadOperator:
+    active: false
+
+complexity:
+  LabeledExpression:
+    active: false
+  TooManyFunctions:
+    thresholdInFiles: 20
+    thresholdInClasses: 20
+    thresholdInInterfaces: 10
+    thresholdInObjects: 10
+    thresholdInEnums: 10
+  ComplexMethod:
+    threshold: 20
+  ComplexCondition:
+    threshold: 5
+  ComplexInterface:
+    threshold: 15
+  LongParameterList:
+    threshold: 8
+
+exceptions:
+  NotImplementedDeclaration:
+    active: false
+
+naming:
+  VariableNaming:
+    variablePattern: '[a-z][A-Za-z0-9]*'
+    privateVariablePattern: '(_)?[a-z][A-Za-z0-9]*'
+    excludeClassPattern: '$^'
+  FunctionMaxLength:
+    maximumFunctionNameLength: 50
+  VariableMinLength:
+    minimumVariableNameLength: 2
+
+potential-bugs:
+  LateinitUsage:
+    active: false
+
+style:
+  UnnecessaryAbstractClass:
+    active: false
+  UnnecessaryApply:
+    active: false
+
+  MandatoryBracesIfStatements:
+    active: false
+
+  ReturnCount:
+    max: 10
+
+  TooManyFunctions:
+    thresholdInFiles: 20
+    thresholdInClasses: 20
+    thresholdInInterfaces: 10
+    thresholdInObjects: 20
+    thresholdInEnums: 11
+
+  ForbiddenComment:
+    active: false
+
+
+  SpacingBetweenPackageAndImports:
+    active: true
+
+  DataClassContainsFunctions:
+    active: false
+
+  ExpressionBodySyntax:
+    active: false
+
+  UnusedPrivateMember:
+    active: false
+
+  OptionalWhenBraces:
+    active: false
+
+  UnderscoresInNumericLiterals:
+    acceptableDecimalLength: 8
+

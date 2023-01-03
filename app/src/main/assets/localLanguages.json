@@ -1,0 +1,128 @@
+[
+  {
+    "language": "Bangla",
+    "code": "bn-IN",
+    "language_code": "bn",
+    "countryCode": "IN"
+  },
+  {
+    "language": "Gujarati",
+    "code": "gu-IN",
+    "language_code": "gu",
+    "countryCode": "IN"
+  },
+  {
+    "language": "Kannada",
+    "code": "kn-IN",
+    "language_code": "kn",
+    "countryCode": "IN"
+  },
+  {
+    "language": "Malayalam",
+    "code": "ml-IN",
+    "language_code": "ml",
+    "countryCode": "IN"
+  },
+  {
+    "language": "Marathi",
+    "code": "mr-IN",
+    "language_code": "mr",
+    "countryCode": "IN"
+  },
+  {
+    "language": "Tamil",
+    "code": "ta-IN",
+    "language_code": "ta",
+    "countryCode": "IN"
+  },
+  {
+    "language": "Telugu",
+    "code": "te-IN",
+    "language_code": "te",
+    "countryCode": "IN"
+  },
+  {
+    "language": "Urdu",
+    "code": "ur-PK",
+    "language_code": "ur",
+    "countryCode": "PK"
+  },
+  {
+    "language": "Hindi",
+    "code": "hi-IN",
+    "language_code": "hi",
+    "countryCode": "IN"
+  },
+  {
+    "language": "English",
+    "code": "en-US",
+    "language_code": "en",
+    "countryCode": "US"
+  },
+  {
+    "language": "Afrikaans (South Africa)",
+    "code": "af-ZA",
+    "language_code": "af",
+    "countryCode": "ZA"
+  },
+  {
+    "language": "Amharic (Ethiopia)",
+    "code": "am-ET",
+    "language_code": "am",
+    "countryCode": "ET"
+  },
+  {
+    "language": "Albanian (Albania)",
+    "code": "sq-AL",
+    "language_code": "sq",
+    "countryCode": "AL"
+  }
+,
+  {
+    "language": "Arabic (Algeria)",
+    "code": "ar-DZ",
+    "language_code": "ar",
+    "countryCode": "DZ"
+  }
+,
+  {
+    "language": "Arabic (Bahrain)",
+    "code": "ar-BH",
+    "language_code": "ar",
+    "countryCode": "BH"
+  }
+
+,
+  {
+    "language": "Arabic (Egypt)",
+    "code": "ar-EG",
+    "language_code": "ar",
+    "countryCode": "EG"
+  }
+,
+  {
+    "language": "Arabic (Iraq)",
+    "code": "ar-IQ",
+    "language_code": "ar",
+    "countryCode": "IQ"
+  }
+
+,
+  {
+    "language": "Arabic (Israel)",
+    "code": "ar-IL",
+    "language_code": "ar",
+    "countryCode": "IL"
+  }
+
+,
+  {
+    "language": "Arabic (Israel)",
+    "code": "ar-IL",
+    "language_code": "ar",
+    "countryCode": "IL"
+  }
+
+]
+
+

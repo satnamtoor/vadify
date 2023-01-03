@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginTop="@dimen/_16sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:rotation="8.3"
+                app:cardElevation="@dimen/_3sdp"
+                app:cardBackgroundColor="@android:color/white"
+                app:cardCornerRadius="@dimen/_27sdp"
+                app:cornerRadius="@dimen/_30sdp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/cardView3"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/cardView3"
+                app:layout_constraintTop_toBottomOf="@+id/cardView3">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/_15sdp"
+                    android:layout_marginLeft="@dimen/_15sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:background="@android:color/transparent"
+                    android:rotation="-8.3"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardView5"
+                    app:layout_constraintEnd_toEndOf="@+id/cardView5"
+                    app:layout_constraintStart_toStartOf="@+id/cardView5"
+                    app:layout_constraintTop_toTopOf="@+id/cardView5">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:srcCompat="@drawable/ic_frame" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView17"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Chat_in_your"
+                        android:textAppearance="@style/semiBold"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toTopOf="@+id/textView18"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+                        app:layout_constraintStart_toStartOf="@+id/textView18"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_chainStyle="packed" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView18"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/mother_tongue"
+                        android:textAppearance="@style/semiBold"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_16ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/imageView13"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/textView17" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardView3"
+                android:layout_width="0dp"
+                app:cardElevation="@dimen/_4sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_marginLeft="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_40sdp"
+                android:layout_marginRight="@dimen/_35sdp"
+                android:rotation="-8.3"
+                app:cardBackgroundColor="@color/light_gray"
+                app:cardCornerRadius="@dimen/_27sdp"
+                app:cornerRadius="@dimen/_30sdp"
+                app:layout_constraintBottom_toTopOf="@+id/cardView5"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView24"
+                app:layout_constraintVertical_bias="0.45"
+                app:layout_constraintVertical_chainStyle="packed">
+
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/constraintLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_margin="@dimen/_5sdp"
+                    android:rotation="8.3"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardView3"
+                    app:layout_constraintEnd_toEndOf="@+id/cardView3"
+                    app:layout_constraintStart_toStartOf="@+id/cardView3"
+                    app:layout_constraintTop_toTopOf="@+id/cardView3">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_audio_frame" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView14"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/Use_voice_command"
+                        android:textAppearance="@style/semiBold"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/imageView12"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@+id/imageView12"
+                        app:layout_constraintTop_toTopOf="@+id/imageView12"
+                        app:layout_constraintVertical_bias="0.3" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/While"
+                        android:textAppearance="@style/semiBold"
+                        android:textColor="@color/gray"
+                        android:textSize="@dimen/_14ssp"
+                        app:layout_constraintBottom_toBottomOf="@+id/textView16"
+                        app:layout_constraintEnd_toStartOf="@+id/textView16"
+                        app:layout_constraintHorizontal_bias="0.4"
+                        app:layout_constraintHorizontal_chainStyle="packed"
+                        app:layout_constraintStart_toStartOf="@+id/textView14"
+                        app:layout_constraintTop_toTopOf="@+id/textView16" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/textView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:text="@string/driving"
+                        android:textAppearance="@style/bold"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_16ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="@+id/textView14"
+                        app:layout_constraintStart_toEndOf="@+id/textView15"
+                        app:layout_constraintTop_toBottomOf="@+id/textView14"
+                        app:layout_constraintVertical_bias="0.0" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textView24"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/talk_to_chat"
+                android:textAppearance="@style/bold"
+                android:textColor="@color/light_blue"
+                android:textSize="@dimen/_15ssp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.24"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+</layout>

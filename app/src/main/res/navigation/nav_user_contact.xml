@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_main"
+    app:startDestination="@id/anotherUserContact"
+    tools:ignore="UnusedNavigation">
+
+
+    <fragment
+        android:id="@+id/anotherUserContact"
+        android:name="com.android.vadify.ui.chat.contact.fragment.AnotherUserContact"
+        android:label="AnotherUserContact"
+        tools:layout="@layout/fragment_another_user_contact">
+
+        <argument
+            android:name="ANOTHER_USER_ID"
+            app:argType="string" />
+        <argument
+            android:name="ROOM_ID"
+            app:argType="string" />
+        <argument
+            android:name="FIRST_TIME_START_CHAT"
+            android:defaultValue="false"
+            app:argType="boolean" />
+
+        <argument
+            android:name="IS_BLOCK"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <argument
+            android:name="GROUP_TYPE"
+            app:argType="string" />
+
+    </fragment>
+</navigation>
+

@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.android.vadify.ui.contact.viewmodel.ContactViewModel" />
+    </data>
+
+    <RelativeLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:weightSum="2">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/send_sms_to_contacts"
+                        android:textAppearance="@style/semiBold"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_13ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/cancelBtn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/cancel"
+                        android:textAppearance="@style/semiBold"
+                        android:textColor="@color/blue"
+                        android:textSize="@dimen/_9ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+        <com.android.vadify.widgets.sticklist.SideBar
+            android:id="@+id/sideBar"
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchText"
+
+           android:layout_marginRight="15dp"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp"
+          android:layout_alignParentRight="true"
+           />
+
+
+        <se.emilsjolander.stickylistheaders.StickyListHeadersListView
+           android:layout_above="@+id/appBarLayout"
+            android:layout_toLeftOf="@+id/sideBar"
+            android:layout_marginRight="10dp"
+            android:id="@+id/contactList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/searchText"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:scrollbars="none" />
+
+        <!--<androidx.cardview.widget.CardView
+            android:layout_below="@+id/appBar"
+            android:id="@+id/cardView10"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="@dimen/_3sdp"
+          >-->
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/searchText"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_below="@+id/appBar"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:background="#fff"
+            android:drawableEnd="@drawable/ic_search_icon"
+            android:drawableRight="@drawable/ic_search_icon"
+            android:gravity="center_vertical"
+            android:hint="@string/search"
+            android:imeOptions="actionDone"
+            android:inputType="text"
+            android:paddingLeft="@dimen/_12sdp"
+            android:paddingRight="@dimen/_12sdp"
+            android:paddingBottom="0dp"
+            app:cardCornerRadius="@dimen/_6sdp"
+            app:cardElevation="@dimen/_3sdp" />
+
+
+        <!--</androidx.cardview.widget.CardView>-->
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBarLayout"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/doneBtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:text="@string/Done" />
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/dialog"
+            android:layout_width="@dimen/_61sdp"
+            android:layout_height="@dimen/_61sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/head_number_bg"
+            android:gravity="center"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_23ssp"
+            android:visibility="gone" />
+
+
+        <FrameLayout
+            android:id="@+id/command_containergroup"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </FrameLayout>
+
+
+    </RelativeLayout>
+</layout>

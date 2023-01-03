@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.android.vadify.ui.dashboard.viewmodel.VadifyFriendViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:background="@color/light_gray"
+        android:layout_height="match_parent">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:contentInsetLeft="0dp"
+                app:navigationIcon="@drawable/ic_arrow"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+
+                        android:id="@+id/leftToolbarAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:background="@null"
+                        android:textAppearance="@style/semiBold"
+                        android:text="@string/Cancel"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/title"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/vadify_friends"
+                        android:textAppearance="@style/semiBold"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+
+                        android:id="@+id/rightToolbarAction"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="@string/send_caps"
+                        android:textAppearance="@style/semiBold"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        android:padding="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"/>
+                </LinearLayout>
+
+
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/appCompatTextView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:layout_marginLeft="@dimen/_16sdp"
+            android:layout_marginTop="@dimen/_13sdp"
+            android:text="@{String.format(@string/vadifyUser, vm.contactSize)}"
+            android:textAppearance="@style/semiBold"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_12ssp"
+            app:layout_constraintStart_toStartOf="@+id/rvBlockedContactLayout"
+            app:layout_constraintTop_toBottomOf="@+id/relativeGroup"
+            android:visibility="gone"
+            />
+
+        <LinearLayout
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_16sdp"
+            android:id="@+id/relativeGroup"
+            app:layout_constraintStart_toStartOf="@+id/rvBlockedContactLayout"
+            app:layout_constraintTop_toBottomOf="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:src="@drawable/people"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_marginStart="@dimen/_12sdp"
+                android:text="New Group"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/semiBold"
+                android:textColor="#2C71DD"
+                android:textSize="@dimen/_12ssp"
+
+                />
+
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/rvBlockedContactLayout"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_margin="@dimen/_2sdp"
+            app:layout_constraintBottom_toTopOf="@+id/inviteFriend"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appCompatTextView2">
+
+            <com.sdi.joyersmajorplatform.widget.EmptyRecyclerView
+                android:id="@+id/vadifyFriendList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/item_vadify_friend" />
+        </FrameLayout>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/inviteFriend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:text="@string/invite_friends"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/rvBlockedContactLayout" />
+
+        <ProgressBar
+            android:id="@+id/friendListProgress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/rvBlockedContactLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

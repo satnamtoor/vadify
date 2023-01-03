@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<resources>
+    <string name="pkey_user_Id" translatable="false">pkey_user_Id</string>
+    <string name="pkey_secure_token" translatable="false">pkey_secure_token</string>
+    <string name="pkey_device_token" translatable="false">pkey_device_token</string>
+    <string name="pkey_first_time_skip" translatable="false">pkey_first_time_skip</string>
+    <string name="pkey_userName" translatable="false">pkey_userName</string>
+
+    <string name="pkey_pop1" translatable="false">pkey_pop1</string>
+    <string name="pkey_pop2" translatable="false">pkey_pop2</string>
+    <string name="pkey_pop3" translatable="false">pkey_pop3</string>
+    <string name="pkey_invite" translatable="false">pkey_invite</string>
+
+
+
+    <string name="pkey_motherLanguage" translatable="false">pkey_motherLanguage</string>
+    <string name="pkey_motherLanguage_Code" translatable="false">pkey_motherLanguage_Code</string>
+
+    <string name="pkey_each_userLanguage_Code" translatable="false">pkey_each_userLanguage_Code</string>
+
+    <string name="pkey_each_command_Code" translatable="false">pkey_each_command_Code</string>
+    <string name="pkey_each_command_Language" translatable="false">pkey_each_command_Language</string>
+    <string name="pkey_each_command_country_code" translatable="false">pkey_each_command_country_code</string>
+
+    <string name="pkey_fromLanguage" translatable="false">pkey_fromLanguage</string>
+    <string name="pkey_fromLanguage_Code" translatable="false">pkey_fromLanguage_Code</string>
+
+    <string name="pkey_fromLanguage_Command_Code" translatable="false">pkey_fromLanguage_Command_Code</string>
+    <string name="pkey_fromLanguage_Command_language" translatable="false">pkey_fromLanguage_Command_language</string>
+    <string name="pkey_fromLanguage_Command_Country" translatable="false">pkey_fromLanguage_Command_Country</string>
+
+
+
+    <string name="pkey_toLanguage" translatable="false">pkey_toLanguage</string>
+    <string name="pkey_toLanguage_Code" translatable="false">pkey_toLanguage_Code</string>
+
+    <string name="pkey_toLanguage_CountryCode" translatable="false">pkey_toLanguage_CountryCode</string>
+    <string name="pkey_fromLanguage_CountryCode" translatable="false">pkey_fromLanguage_CountryCode</string>
+
+
+
+    <string name="pkey_groupNotification" translatable="false">pkey_groupNotification</string>
+    <string name="pkey_status" translatable="false">pkey_status</string>
+    <string name="pkey_call_status" translatable="false">pkey_call_status</string>
+
+    <string name="pkey_languageChateStatus" translatable="false">pkey_isLanaguageChange</string>
+    <string name="pkey_language_switch">pkey_language_switch</string>
+
+    <string name="pkey_emailId" translatable="false">pkey_emailId</string>
+    <string name="pkey_dialCode" translatable="false">pkey_dialCode</string>
+    <string name="pkey_countryCode" translatable="false">pkey_countryCode</string>
+    <string name="pkey_isChatScreen" >pkey_isChatScreen</string>
+
+    <string name="pkey_isFirstTime" translatable="false">pkey_isFirstTime</string>
+
+
+    <string name="pkey_badge_count" translatable="false">pkey_badge_count</string>
+
+    <string name="pkey_call_user" translatable="false">pkey_call_user</string>
+    <string name="pkey_call_user_name" translatable="false">pkey_call_user_name</string>
+    <string name="pkey_call_user_image" translatable="false">pkey_call_user_image</string>
+
+    <string name="pkey_sender_name_call" translatable="false">pkey_sender_name_call</string>
+    <string name="pkey_receiver_name_call" translatable="false">pkey_receiver_name_call</string>
+
+
+    <string name="pkey_groupPermission" translatable="false">pkey_groupPermission</string>
+    <string name="pkey_inAppSound" translatable="false">pkey_inAppSound</string>
+    <string name="pkey_inAppVibrate" translatable="false">pkey_inAppVibrate</string>
+    <string name="pkey_lastLogin" translatable="false">pkey_lastLogin</string>
+    <string name="pkey_liveLocationShare" translatable="false">pkey_liveLocationShare</string>
+    <string name="pkey_messageNoficaction" translatable="false">pkey_messageNoficaction</string>
+
+    <string name="pkey_saveToCameraRole" translatable="false">pkey_saveToCameraRole</string>
+    <string name="pkey_blocked_user" translatable="false">pkey_blocked_user</string>
+
+    <string name="pkey_number" translatable="false">pkey_number</string>
+    <string name="pkey_phone" translatable="false">pkey_phone</string>
+    <string name="pkey_profileImage" translatable="false">pkey_profileImage</string>
+
+    <string name="pkey_profileImage_home" translatable="false">pkey_profileImage_home</string>
+    <string name="pkey_profile_information" translatable="false">pkey_profile_information</string>
+
+    <string name="pkey_securityNotification" translatable="false">pkey_securityNotification</string>
+    <string name="pkey_showPreview" translatable="false">pkey_showPreview</string>
+
+    <string name="pkey_needToUpdateNotificationData" translatable="false">pkey_needToUpdateNotificationData</string>
+
+
+    <string name="pkey_master_key" translatable="false">pkey_master_key</string>
+    <string name="pkey_context_key" translatable="false">pkey_context_key</string>
+    <string name="pkey_phone_number" translatable="false">pkey_phone_number_key</string>
+
+</resources>

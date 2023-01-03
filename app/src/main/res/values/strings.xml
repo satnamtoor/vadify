@@ -1,0 +1,250 @@
+<resources>
+    <string name="app_name">Vadify</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="network_error_forbidden">Permission denied</string>
+    <string name="network_error_unknown">Network Error</string>
+    <string name="meet_message_translate">Meet. Message. Translate</string>
+    <string name="MyPhoneNumber">My Phone Number</string>
+    <string name="TermConditionPart1">By registering you agree to Terms of Service and our Privacy Policy</string>
+    <string name="TermConditionPart2">Terms of Service</string>
+    <string name="TermConditionPart3">and our</string>
+    <string name="TermConditionPart4">Privacy Policy</string>
+
+    <string name="IS_FIRST_TIME">is_first_time</string>
+    <string name="GPS_Validation">GPS is not enabled. Do you want to go to settings menu ?</string>
+    <string name="setting">Settings</string>
+    <string name="FileSizeCheck">File size should not be greater than 500 MB</string>
+
+    <string name="NotificationTitle">Vadify would like to send you Push Notifications</string>
+    <string name="NotificationMsg">Notifications may include alerts, sounds and icon badges. You can set it up from Settings.</string>
+    <string name="CustomTextInputLayout_optional">optional</string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="Chat">Chat</string>
+    <string name="home">Home</string>
+    <string name="Camera">Camera</string>
+    <string name="India">India</string>
+    <string name="United_state">United States</string>
+    <string name="VideoRecording">Video Recording</string>
+    <string name="Gallery">Gallery</string>
+    <string name="choice">Select options</string>
+    <string name="Cancel">Cancel</string>
+    <string name="Call">Call</string>
+    <string name="Calls">Calls</string>
+
+    <string name="Settings">Settings</string>
+    <string name="Done">Done</string>
+    <string name="driving">Driving</string>
+    <string name="Chat_in_your">Chat in your</string>
+    <string name="Use_voice_command">Use VOICE command</string>
+    <string name="While">while</string>
+    <string name="mother_tongue">Mother Tongue</string>
+    <string name="one">ONE</string>
+    <string name="smallone">one</string>
+    <string name="to">to</string>
+    <string name="group">GROUP</string>
+    <string name="chat">Chat</string>
+    <string name="call">Call</string>
+    <string name="or">Or</string>
+    <string name="video">video</string>
+    <string name="talk_to_chat">TALK to CHAT</string>
+    <string name="let_s_start">LET&#8217;s START…</string>
+    <string name="language">LANGUAGE</string>
+
+
+    <string name="language_sm">Language</string>
+
+    <string name="is_no_more_a_barrier">is no more a barrier</string>
+    <string name="translate_messages">Translate messages</string>
+    <string name="your_mother_language">your Mother Language</string>
+    <string name="send">send</string>
+    <string name="send_caps">Send</string>
+    <string name="voice_message">voice message</string>
+    <string name="in_your_mother_language">in your Mother Language</string>
+    <string name="meeting_at">MEETING at</string>
+    <string name="vadify_video_room">Vadify Video Room</string>
+    <string name="get_together_with">Get together with</string>
+    <string name="friends">FRIENDS</string>
+    <string name="office_meeting">Office Meeting</string>
+    <string name="do_a_quick">Do a quick</string>
+    <string name="login_label">We will not, in any circumstances, share your personal information with other individuals or organizations without your permission, including public organizations, corporations or individuals, except when applicable by law.</string>
+    <string name="term_policy">By registering you agree to Terms of Service and our Privacy Policy</string>
+    <string name="confirmation_msg">Please confirm your country code and enter your phone number</string>
+    <string name="country">Country</string>
+    <string name="mobile_number">Mobile Number</string>
+    <string name="next">Next</string>
+    <string name="verification">Verification</string>
+    <string name="verification_msg">Verification code has been sent by SMS to</string>
+    <string name="enter_code">Enter Code</string>
+    <string name="not_receive_code">Didn&#8217;t receive any code?</string>
+    <string name="resend">RESEND</string>
+    <string name="change">CHANGE</string>
+    <string name="correct_number">Not the correct number?</string>
+    <string name="submit">Submit</string>
+    <string name="verify_mobile_number">Enter code to verify mobile number</string>
+    <string name="my_personal_information">My Personal Information</string>
+    <string name="set_up_voice">Setup Voice Commands</string>
+    <string name="why_how">Why and How?</string>
+
+    <string name="create_group_opt">Please provide a Group subject and optional Group icon.</string>
+    <string name="setting_commands">Setting up 5 voice commands are required for voice command and voice to type feature to work. Once you complete this step (should not take more than 1 minutes) you will be able to control Vadify through your voice.</string>
+
+    <string name="repeat_command">Repeat thrice the same command with a few second pause.</string>
+    <string name="same_command">Commands are the same irrespective of the language, but you need to record it once for each language you choose.</string>
+
+    <string name="profile_image_label">Set Profile Image and Name</string>
+    <string name="let_s_start_label">Let&#8217;s Start</string>
+    <string name="i_ll_do_it_later">I&#8217;ll do it later</string>
+    <string name="name">Name</string>
+    <string name="select_mother_language">Select Mother Language</string>
+    <string name="protect_environment">… in a protected environment.</string>
+    <string name="blocked_contacts">Blocked Contacts</string>
+    <string name="notification">Notifications</string>
+    <string name="faq">FAQ</string>
+    <string name="skip">Skip</string>
+    <string name="how_it_works">How It Works</string>
+    <string name="status">Status</string>
+    <string name="everyone">Everyone</string>
+    <string name="my_contacts">My Contacts</string>
+    <string name="edit_chat_settings">Edit Chat Settings</string>
+    <string name="save_to_camera_roll">Save to Camera Roll</string>
+    <string name="delete_all_chats">Delete All Chats</string>
+    <string name="clear_all_chats">Clear All Chats</string>
+    <string name="update">Update</string>
+    <string name="email">Email</string>
+    <string name="mother_language">Mother Language</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="about_us">About Us</string>
+    <string name="office_address">Office Address</string>
+    <string name="get_in_touch">Get in Touch</string>
+    <string name="privacy_policy">Privacy Policy</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="clear_chat_progress">Clear chat…</string>
+    <string name="exit_from_group">Exit from group</string>
+    <string name="delete_chat_progress">Delete chat…</string>
+    <string name="block_contact_progress">Contact block…</string>
+
+    <string name="otp_validation">Please enter valid otp</string>
+    <string name="not_support_language">Speech output is not available for this language</string>
+    <string name="phone_validation">Please enter valid phone number</string>
+    <string name="name_validation">Please fill name</string>
+    <string name="language_validation">Please Select language</string>
+    <string name="email_validation">Please fill valid email Id</string>
+    <string name="unknow_msg">Unknown error</string>
+    <string name="terms">Terms</string>
+    <string name="policy">Policy</string>
+    <string name="availableUser">%1$s User Found</string>
+
+
+    <string name="signing_out">Signing out</string>
+    <string name="sign_out">Delete My Account</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    <string name="record_now">Record Now</string>
+    <string name="skip_now">Skip Now</string>
+
+    <string name="are_you_sure">Are you sure ?</string>
+
+    <string name="sending">Sending…</string>
+    <string name="verifying">Verifying…</string>
+    <string name="deleting">Deleting…</string>
+    <string name="updating">Updating…</string>
+    <string name="geting_languages">Fetching…</string>
+    <string name="invite_friends">Invite Friends</string>
+    <string name="vadify_friends">Vadify Friends</string>
+    <string name="cancel">Cancel</string>
+    <string name="send_sms_to_contacts">Send SMS to Contacts</string>
+    <string name="new_call">New Call</string>
+    <string name="add_member">Add Member</string>
+    <string name="search">Search</string>
+    <string name="share_message">I am using Vadify. This is Incredible. Can you install and let’s chat in our language? It’s going to be fun :</string>
+    <string name="android_app">Android: https://play.google.com/store/apps/details?id=com.vadify</string>
+    <string name="ios_app">iPhone: https://apps.apple.com/in/app/vadify/id1530396465</string>
+    <string name="vadify_link">www.vadifyapp.com/download</string>
+    <string name="download_link"><![CDATA[<a href="www.vadifyapp.com/download">www.vadifyapp.com/download</a>]]></string>
+    <string name="vadifyUser">%1$s of my contacts are using Vadify</string>
+    <string name="type_message">Type Message</string>
+    <string name="typing">Typing…</string>
+    <string name="speechRecoganizationProcess">Speech Recognition is not available. Please try again</string>
+    <string name="tranalate_text_faliure">Unable to translate message</string>
+
+    <string name="start_talking_i_m_listening">Start talking … I&#8217;m listening</string>
+    <string name="winnetka_ca_91306">Winnetka, CA 91306</string>
+    <string name="vadify_would_like_to_access_your_contacts">Vadify would like to access your Contacts</string>
+    <string name="vadify_contact_message">Vadify app uses your address book phone numbers to help you to connect you with other Vadify users.</string>
+    <string name="dont_allow">Don&#8217;t Allow</string>
+    <string name="ok">OK</string>
+    <string name="invite_friend_message">Some of your contacts are already using Vadify. Tap “Invite” to send our App Store download link to other friends and contacts.</string>
+    <string name="later">Later</string>
+    <string name="invite">Invite</string>
+    <string name="send_message_title">Send Message…</string>
+    <string name="edit_my_account">Edit My Account</string>
+    <string name="privacy">Privacy</string>
+    <string name="who_can_add_me_to_group">Who can add me to group</string>
+    <string name="live_location_share">Live Location Share</string>
+    <string name="show_security_notifications">Show Security Notifications</string>
+    <string name="dummy_message">t is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</string>
+    <string name="change_phone_number">Change Phone Number</string>
+    <string name="delete">Delete</string>
+    <string name="message_notifications">Message Notifications</string>
+    <string name="group_notifications">Group Notifications</string>
+    <string name="show_notifications">Show Notifications</string>
+    <string name="vibrate">Vibrate</string>
+    <string name="in_app_notifications">In App Notifications</string>
+    <string name="sound">Sound</string>
+    <string name="show_preview">Show preview</string>
+    <string name="preview_message_text">Preview Message text</string>
+    <string name="last_effected_date">Date of last effective update is 14 Aug, 2020.</string>
+    <string name="voice_command">Voice Command</string>
+    <string name="timer_message">As 1 minute passed, Voice Command has been stopped.</string>
+    <string name="want_to_resume_voice_command">Want to resume Voice Command?</string>
+    <string name="message_options">Friends will receive the following message</string>
+    <string name="more">More</string>
+    <string name="mail">Mail</string>
+    <string name="copy_invite">copy invite</string>
+    <string name="message">Message</string>
+    <string name="sec_to_send">SEC. TO SEND</string>
+    <string name="send_image">Send Image</string>
+    <string name="vadify_player">Vadify Player</string>
+    <string name="mute">Mute</string>
+    <string name="unmute">UnMute</string>
+
+    <string name="contact_info">Contact Info</string>
+    <string name="clear_chat">Clear Chat</string>
+    <string name="report_group">Report Group</string>
+    <string name="delete_chat">Delete Chat</string>
+    <string name="block_contact">Block Contact</string>
+    <string name="unblock_message">Unblock user in setting screen before proceed further</string>
+    <string name="message_translate_label">Message already Translated</string>
+    <string name="end_to_end_encrypted">End to End Encrypted</string>
+
+    <string name="voice_command_setup_pop">Press Skip Now to continue chatting now and record voice commands later in settings.</string>
+    <string name="voice_command_setup_pop2">Press Record Now to record voice command now and then continue chatting.</string>
+    <string name="voice_command_setup_pop3">. Record voice commands later from settings.</string>
+    <string name="delete_message_confirmation">Are you sure you want to delete this message?</string>
+    <string name="delete_translation">Are you sure you want to delete this translations?</string>
+
+    <string name="select_users">Please select users to forward the message</string>
+
+    <string-array name="settings">
+        <item>Record Voice Commands</item>
+        <item>Notifications</item>
+        <item>Invite Friends</item>
+        <item>FAQ</item>
+        <item>About Us</item>
+        <item>Privacy Policy</item>
+        <item>Terms and Conditions</item>
+
+    </string-array>
+
+
+    <string name="answer">Answer</string>
+    <string name="decline">Decline</string>
+    <string name="all">All</string>
+    <string name="all_set">You’re all set to go.</string>
+    <string name="voice_vadify_command">You can now control Vadify with your voice command.</string>
+    <string name="missed">Missed</string>
+    <string name="version_testing">App version 1.0.2</string>
+    <string name="lang_not_found">Language not found</string>
+
+</resources>

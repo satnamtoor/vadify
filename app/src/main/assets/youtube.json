@@ -1,0 +1,682 @@
+[
+    {
+      "kind": "youtube#searchResult",
+      "etag": "fU1PTZt5UJCFgSulDTQn7WxZGlQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "JUY4l92DzMI"
+      },
+      "snippet": {
+        "publishedAt": "2021-10-02T02:45:42Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - Full Tutorial",
+        "description": "How to download, install, register and setup' from Start TO Finish? How to setup Maya commands? How to manually chat?",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/JUY4l92DzMI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/JUY4l92DzMI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/JUY4l92DzMI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-10-02T02:45:42Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "3seHJhc5OtKfPd5Zvc8DCTfGjr4",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "8vWZextiiNA"
+      },
+      "snippet": {
+        "publishedAt": "2021-10-01T15:28:49Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - Czat z kazdym na swiecie po polsku",
+        "description": "Rozmawiaj z kazdym na swiecie po polsku. Vadify to pierwsza bezdotykowa, wielojezyczna appka, kt�ra oferuje tlumaczenie ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/8vWZextiiNA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/8vWZextiiNA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/8vWZextiiNA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-10-01T15:28:49Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "38NLPsPNaXUk4HVQIN8zHodK9rE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FTeyLhKQ_l0"
+      },
+      "snippet": {
+        "publishedAt": "2021-10-01T15:22:22Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - ???????????? ???????? ?????????? ?????? ???????",
+        "description": "Vadify ?????????? ???????? ?????????? ????????? ????????? ?????? ????? ?????????? ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FTeyLhKQ_l0/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FTeyLhKQ_l0/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FTeyLhKQ_l0/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-10-01T15:22:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Vsd-hHxA2STF6YhUXmMqirbCdl0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "OB_Y7X9YsLs"
+      },
+      "snippet": {
+        "publishedAt": "2021-10-01T03:46:32Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - Change the way you chat forever!",
+        "description": "Vadify ?????????? ????????? ?????????? ???????? ??????????? ????? ??? ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/OB_Y7X9YsLs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/OB_Y7X9YsLs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/OB_Y7X9YsLs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-10-01T03:46:32Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "z8RzoBdT18VHbLJX2LwB--Ob_Pk",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "fZtzSdL7nKc"
+      },
+      "snippet": {
+        "publishedAt": "2021-10-01T03:38:51Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - Change the way you chat forever!",
+        "description": "Vadify ?????????? ????????? ?????????? ???????? ??????????? ????? ??? ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/fZtzSdL7nKc/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/fZtzSdL7nKc/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/fZtzSdL7nKc/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-10-01T03:38:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "N1G-bud4-WPeio2p2XWCZbtDPok",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "gf-LqFo-c4Y"
+      },
+      "snippet": {
+        "publishedAt": "2021-10-01T01:29:15Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - Simply speak in your language to chat to anyone in the world. Hands-Free, Multilingual Chat",
+        "description": "Using Vadify, you can speak in your language to chat to anyone in the world. Use voice commands to send and listen to ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/gf-LqFo-c4Y/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/gf-LqFo-c4Y/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/gf-LqFo-c4Y/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-10-01T01:29:15Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "V_kf_YCvSPNDJUL5643hIeUJ9lM",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "S_-LwhJ0_2c"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-28T19:35:44Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Why your privacy matters?",
+        "description": "At Vadify we take your privacy and security seriously. We are always committed to protecting your interests as our clients.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/S_-LwhJ0_2c/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/S_-LwhJ0_2c/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/S_-LwhJ0_2c/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-28T19:35:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GQg_-w5BeIKa4KfALbW1FAkLxgY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ih2bXBW_zPw"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-28T19:33:29Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify is the solution. Why Vadify? Why #switchtoVadify?",
+        "description": "No more English; no more typing. Just speak in your mother tongue to chat to anyone in the world. Imagine how this can give a ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ih2bXBW_zPw/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ih2bXBW_zPw/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ih2bXBW_zPw/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-28T19:33:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "wEzEjtClr1r7aBfs8-bmiHHGngc",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "Ag1PLt7_2nA"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-28T19:28:51Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "What is the problem with the chat App you use now?",
+        "description": "There are billions of people who are not experts in English. Everyone is dependent on those tiny keys that many can't even clearly ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/Ag1PLt7_2nA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/Ag1PLt7_2nA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/Ag1PLt7_2nA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-28T19:28:51Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "-C3n1o5zZBmy-Dyj0j93k9uFeGo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "sKS_k_sp3ZQ"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-25T22:29:00Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - ?????? ??? ???? ?? ?? ????? ??? ??? ????",
+        "description": "?????? ??? ???? ?? ?? ????? ??? ??? ????? Vadify ???? ??????-????, ???????? ?? ?? ??? ?? ???? ?? ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/sKS_k_sp3ZQ/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/sKS_k_sp3ZQ/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/sKS_k_sp3ZQ/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-25T22:29:00Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "1dCctalG8GmhlSTtXjTiZs_RSS0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "tAOIRTj_6OI"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-25T22:13:19Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - Chat in your language to anyone in the world!",
+        "description": "No more typing simply talk. Billions of reasons to switch. Learn more here: https://www.vadify.com/ Download Vadify iPhone: ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/tAOIRTj_6OI/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/tAOIRTj_6OI/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/tAOIRTj_6OI/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-25T22:13:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "hR9__12Q6X5R-0ZtfqpjcL8RKBg",
+      "id": {
+        "kind": "youtube#playlist",
+        "playlistId": "PLczmWLTF1zq1yBtXRq_FrULhg0s1vl8iH"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-24T20:38:12Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - Changing the way we CHAT forever!",
+        "description": "Explainer videos of the features and real world usage of Vadify.",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/dr4afwX8Zrs/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/dr4afwX8Zrs/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/dr4afwX8Zrs/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-24T20:38:12Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "Xq6ayCJxRPhaLJashTVD1wC1oi8",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "2lgPt_SzR_Q"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-24T20:18:52Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - Referred by Khaleel",
+        "description": "????????? Vadify ??????????? ???? ?????? ??????????. Vadify ?????????? ???????? ?????????? ...",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/2lgPt_SzR_Q/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/2lgPt_SzR_Q/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/2lgPt_SzR_Q/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-24T20:18:52Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "GxUwwSyvuPMuKsDtVqNp7LWE1rY",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "jh0sqkk2j8E"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-24T19:34:22Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - How to share photos videos location contacts and files",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/jh0sqkk2j8E/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/jh0sqkk2j8E/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/jh0sqkk2j8E/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-24T19:34:22Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "KkamuHulM9Lk-dr5g-vR3rB8IpA",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "YpDoZFD0Bho"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-24T19:30:35Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - How to record Maya commands",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/YpDoZFD0Bho/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/YpDoZFD0Bho/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/YpDoZFD0Bho/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-24T19:30:35Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "m_DxkYC8k7eCu4RD1d_B5Qn56N0",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "FbbAUNwxi9U"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-24T19:28:23Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - How to download and register your vadify account",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/FbbAUNwxi9U/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/FbbAUNwxi9U/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/FbbAUNwxi9U/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-24T19:28:23Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "7Z5gEfaQM0VvaOwFwJIsec5hLuo",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "UyvIK017GUA"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-24T19:26:29Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - How to chat manually",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/UyvIK017GUA/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/UyvIK017GUA/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/UyvIK017GUA/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-24T19:26:29Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "m6hHIB2cB_7mj6ySiPSchPNfHDQ",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "CrbToc1WGKE"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-24T19:24:19Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - How to chat handsfree using speech to text and Maya Commands",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/CrbToc1WGKE/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/CrbToc1WGKE/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/CrbToc1WGKE/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-24T19:24:19Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "ZXmLTcApQ-NLPbJYc1DEflYk1ok",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "NuZddZ4s3CU"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-24T19:21:44Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify English How to change name mood email profile",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/NuZddZ4s3CU/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/NuZddZ4s3CU/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/NuZddZ4s3CU/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-24T19:21:44Z"
+      }
+    },
+    {
+      "kind": "youtube#searchResult",
+      "etag": "VvwBspKbqkgA75v4OaYksx44siE",
+      "id": {
+        "kind": "youtube#video",
+        "videoId": "7TpGLg3I0Yo"
+      },
+      "snippet": {
+        "publishedAt": "2021-09-24T19:18:32Z",
+        "channelId": "UCcEcrH7HaE5JTnbkNW-ky8A",
+        "title": "Vadify - How to change language and use Mother tongue button",
+        "description": "",
+        "thumbnails": {
+          "default": {
+            "url": "https://i.ytimg.com/vi/7TpGLg3I0Yo/default.jpg",
+            "width": 120,
+            "height": 90
+          },
+          "medium": {
+            "url": "https://i.ytimg.com/vi/7TpGLg3I0Yo/mqdefault.jpg",
+            "width": 320,
+            "height": 180
+          },
+          "high": {
+            "url": "https://i.ytimg.com/vi/7TpGLg3I0Yo/hqdefault.jpg",
+            "width": 480,
+            "height": 360
+          }
+        },
+        "channelTitle": "Vadify - Hands-free, multi-lingual messaging App",
+        "liveBroadcastContent": "none",
+        "publishTime": "2021-09-24T19:18:32Z"
+      }
+    }
+  ]

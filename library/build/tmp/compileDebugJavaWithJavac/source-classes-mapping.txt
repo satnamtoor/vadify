@@ -1,0 +1,2 @@
+com/robert/progress/kotlin/BuildConfig.java
+ com.robert.progress.kotlin.BuildConfig

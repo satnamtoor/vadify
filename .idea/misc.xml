@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/another_user_call_btn.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/another_user_msg_btn.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/chat_selector.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/chat_selector_sh.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/dark_blue_circle.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/ic_add_call.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/ic_audio_call.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/ic_chat.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/ic_chat_.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/ic_trash.xml" value="0.2125" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/ic_vadify_icon.xml" value="0.5" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/drawable/ic_video_call.xml" value="0.20923076923076922" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/activity_call.xml" value="0.18614130434782608" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/activity_chat.xml" value="0.2" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/activity_chat_account.xml" value="0.15534420289855072" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/activity_contact.xml" value="0.161231884057971" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/activity_dashboard.xml" value="0.22" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/activity_edit_account.xml" value="0.16077898550724637" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/activity_edit_profile.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/activity_faq.xml" value="0.16077898550724637" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/activity_video.xml" value="0.16666666666666666" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/command_registration.xml" value="0.2" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/create_group.xml" value="0.161231884057971" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/fragment_another_user_contact.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/fragment_call.xml" value="0.1" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/fragment_chat.xml" value="0.2" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/fragment_language.xml" value="0.16983695652173914" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/fragment_login.xml" value="0.22" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/fragment_personal_information.xml" value="0.33" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/fragment_setting.xml" value="0.1634963768115942" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/fragment_verification.xml" value="0.21" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/help_screen.xml" value="0.22" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/home.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/item_chat.xml" value="0.18" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/item_user_list.xml" value="0.18" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/item_vadify_friend.xml" value="0.12409420289855072" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/item_video.xml" value="0.1" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/list_item_home.xml" value="0.14266304347826086" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/popup_reply_layout.xml" value="0.1403985507246377" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/sample_home.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/translate_adapter.xml" value="0.5" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/translation_screen.xml" value="0.18" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/layout/user_profile.xml" value="0.1598731884057971" />
+        <entry key="..\:/upwork/rovy/Code/10-dec-21/Vadify/app/src/main/res/menu/bottom_nav_menu.xml" value="0.19635416666666666" />
+        <entry key="..\:/upwork/rovy/Code/18-Nov-21/Vadify/app/src/main/res/layout/activity_chat.xml" value="0.18070652173913043" />
+        <entry key="..\:/upwork/rovy/Code/18-Nov-21/Vadify/app/src/main/res/layout/item_chat.xml" value="0.1" />
+        <entry key="..\:/upwork/rovy/Code/19-oct-21/Vadify/app/src/main/res/layout/activity_chat.xml" value="0.18" />
+        <entry key="..\:/upwork/rovy/Code/19-oct-21/Vadify/app/src/main/res/layout/activity_video.xml" value="0.15670289855072464" />
+        <entry key="..\:/upwork/rovy/Code/19-oct-21/Vadify/app/src/main/res/layout/custom_call_notification.xml" value="0.11367753623188406" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/drawable/another_user_call_btn.xml" value="0.19635416666666666" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/drawable/another_user_videocall_btn.xml" value="0.19635416666666666" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/drawable/arrow_forward.xml" value="0.19635416666666666" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/drawable/backgroud_shape.xml" value="0.19635416666666666" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/drawable/background_blue_gradient.xml" value="0.19635416666666666" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/drawable/blue_circle.xml" value="0.19635416666666666" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/drawable/ic_paper_chat.xml" value="0.20416666666666666" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/font/poppins.xml" value="0.2265625" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/font/poppins_medium.xml" value="0.2265625" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/font/poppins_semibold.xml" value="0.2265625" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_call.xml" value="0.16893115942028986" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_camera.xml" value="0.16394927536231885" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_chat.xml" value="0.2" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_contact.xml" value="0.1721014492753623" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_dashboard.xml" value="0.13632246376811594" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_edit_account.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_splash.xml" value="0.1453804347826087" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_start_up.xml" value="0.22" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_video.xml" value="0.14855072463768115" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_video_player.xml" value="0.16893115942028986" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/activity_walk_through_screen.xml" value="0.22" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/command_registration.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/custom_call_notification.xml" value="0.16259057971014493" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/fragment_another_user_contact.xml" value="0.22" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/fragment_call.xml" value="0.1621376811594203" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/fragment_chat.xml" value="0.15353260869565216" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/fragment_login.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/fragment_setting.xml" value="0.18" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/fragment_vadify_friend.xml" value="0.22" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/fragment_verification.xml" value="0.15" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/help_screen.xml" value="0.16666666666666666" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/home.xml" value="0.12092391304347826" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/invite_friend_popup.xml" value="0.1721014492753623" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/item_call_logs.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/item_chat.xml" value="0.11231884057971014" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/item_user_list.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/message_popup.xml" value="0.25" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/popup_message_layout.xml" value="0.1721014492753623" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/translate_adapter.xml" value="0.16893115942028986" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/translation_screen.xml" value="0.21" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/layout/user_profile.xml" value="0.1453804347826087" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/app/src/main/res/menu/bottom_nav_menu.xml" value="0.18802083333333333" />
+        <entry key="..\:/upwork/rovy/Code/28-1-22/Vadify/ccp/src/main/res/layout/layout_picker_dialog.xml" value="0.1644021739130435" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

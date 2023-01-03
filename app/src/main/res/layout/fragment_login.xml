@@ -1,0 +1,381 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="vm"
+            type="com.android.vadify.ui.login.viewmodel.LoginFragmentViewModel" />
+
+        <variable
+            name="vmProfile"
+            type="com.android.vadify.ui.login.viewmodel.ProfileFragmentViewModel" />
+
+
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        tools:context=".ui.login.fragment.LoginFragment">
+
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/_15sdp"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/MyPhoneNumber"
+                    android:textAppearance="@style/semiBold"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="@dimen/_15sdp" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:fillViewport="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center">
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView"
+                    android:layout_width="@dimen/_42sdp"
+                    android:layout_height="@dimen/_42sdp"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    android:shape="ring"
+                    app:cardCornerRadius="@dimen/_42sdp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageView"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:layout_margin="@dimen/_2sdp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/circle" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageView2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:srcCompat="@drawable/ic_phone" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_40sdp"
+                    android:layout_marginLeft="@dimen/_40sdp"
+                    android:layout_marginTop="@dimen/_26sdp"
+                    android:layout_marginEnd="@dimen/_40sdp"
+                    android:layout_marginRight="@dimen/_40sdp"
+                    android:gravity="center"
+                    android:text="@string/confirmation_msg"
+                    android:textAppearance="@style/semiBold"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_11ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_24sdp"
+                    app:cardCornerRadius="@dimen/_10sdp"
+                    app:layout_constraintEnd_toEndOf="@+id/textView4"
+                    app:layout_constraintStart_toStartOf="@+id/textView4"
+                    app:layout_constraintTop_toBottomOf="@+id/textView4">
+
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/NextBtn"
+                            android:layout_width="@dimen/_93sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_19sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:text="@string/next"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/country_code" />
+
+                        <com.android.vadify.widgets.CustomTextInputLayout
+                            android:focusable="false"
+                            android:imeOptions="actionNext"
+                            android:id="@+id/textInputLayout2"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_18sdp"
+                            android:layout_marginLeft="@dimen/_18sdp"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:layout_marginEnd="@dimen/_18sdp"
+                            android:layout_marginRight="@dimen/_18sdp"
+                            app:endIconTint="@color/blue"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+
+
+                                android:id="@+id/txtName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="@string/name"
+                                android:imeOptions="actionNext"
+                                android:inputType="text"
+                                android:maxLength="40"
+                                android:text="@={vmProfile.userName}"
+                                />
+                        </com.android.vadify.widgets.CustomTextInputLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/countryInputField"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_18sdp"
+                            android:layout_marginLeft="@dimen/_18sdp"
+
+                            app:endIconDrawable="@drawable/drop_down"
+                            app:endIconMode="custom"
+                            app:endIconTint="@color/blue"
+                            app:layout_constraintEnd_toEndOf="@+id/textInputLayout2"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/textInputLayout2">
+
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/country_label"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/country"
+                                android:textAppearance="@style/medium"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_9ssp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                            <com.hbb20.CountryCodePicker
+                                app:ccp_autoDetectCountry="true"
+                                app:ccp_textGravity="LEFT"
+                                app:ccp_textSize="@dimen/_12sdp"
+                                app:ccpDialog_keyboardAutoPopup="true"
+                                android:id="@+id/countryInputBtn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:background="@android:color/white"
+                                android:drawableEnd="@drawable/drop_down"
+                                android:ellipsize="end"
+                                android:focusable="false"
+                                app:ccp_clickable="true"
+                                android:cursorVisible="false"
+                                android:longClickable="false"
+                                android:focusableInTouchMode="true"
+                                android:inputType="text"
+                                android:paddingEnd="@dimen/_8sdp"
+                                android:paddingBottom="@dimen/_2sdp"
+                                android:singleLine="true"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/flagView"
+                                app:layout_constraintTop_toBottomOf="@+id/country_label" />
+
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/flagView"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:gravity="center"
+                                android:text="@{vm.countryFlag}"
+                                android:textColor="#7a7a7a"
+                                app:layout_constraintBottom_toBottomOf="@+id/countryInputBtn"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/countryInputBtn"
+                                android:paddingStart="@dimen/_4sdp" />
+
+                            <View
+                                android:layout_width="wrap_content"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="2dp"
+                                android:background="@color/blue"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/countryInputBtn" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:id="@+id/country_code"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            app:layout_constraintEnd_toEndOf="@+id/countryInputField"
+                            app:layout_constraintStart_toStartOf="@+id/countryInputField"
+                            app:layout_constraintTop_toBottomOf="@+id/countryInputField">
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/phoneNumber"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_3sdp"
+                                android:background="@android:color/white"
+                                android:digits="0123456789-"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="12"
+                                android:paddingBottom="3dp"
+                                android:text="@={vm.phoneNumber}"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/textInputEditText"
+                                app:layout_constraintTop_toBottomOf="@+id/textView39" />
+
+
+                            <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/textInputEditText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="0dp"
+                                android:background="@android:color/transparent"
+                                android:clickable="false"
+                                android:digits="0123456789-+"
+                                android:focusable="false"
+                                android:imeOptions="actionDone"
+                                android:inputType="number"
+                                android:maxLength="20"
+                                android:paddingBottom="@dimen/_2sdp"
+                                android:text="@={vm.countryCode}"
+                                app:layout_constraintBottom_toBottomOf="@+id/phoneNumber"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="@+id/phoneNumber" />
+
+                            <View
+                                android:id="@+id/textView38"
+                                android:layout_width="wrap_content"
+                                android:layout_height="1dp"
+                                android:background="@color/blue"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toBottomOf="@+id/phoneNumber" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/textView39"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_9sdp"
+                                android:text="@string/mobile_number"
+                                android:textAppearance="@style/medium"
+                                android:textColor="@color/blue"
+                                android:textSize="@dimen/_9ssp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView5"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_22sdp"
+                    android:layout_marginBottom="@dimen/_50sdp"
+                    android:gravity="center"
+                    android:text="@string/login_label"
+                    android:textAppearance="@style/regular"
+                    android:textColor="@color/gray"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintBottom_toTopOf="@+id/textView6"
+                    app:layout_constraintEnd_toEndOf="@+id/cardView2"
+                    app:layout_constraintStart_toStartOf="@+id/cardView2"
+                    app:layout_constraintTop_toBottomOf="@+id/cardView2"
+                    app:layout_constraintVertical_bias="0.0" />
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView6"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/_12sdp"
+                    android:gravity="center"
+                    android:text="@string/term_policy"
+                    android:textAppearance="@style/regular"
+                    android:textSize="@dimen/_9ssp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    android:layout_marginRight="3dp"
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:background="@color/light_sky"
+            android:layout_margin="5dp"
+android:layout_alignParentRight="true"
+    card_view:cardElevation="5dp"
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/card_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            card_view:cardCornerRadius="4dp">
+            <LinearLayout
+
+                android:background="@color/light_sky"
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+
+            <com.google.android.material.textview.MaterialTextView
+             android:textSize="14dp"
+               android:layout_margin="3dp"
+                android:padding="@dimen/_3sdp"
+                android:background="@color/blue"
+                android:id="@+id/textFrom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                 android:text="From"
+                android:textAppearance="@style/semiBold"
+                android:textColor="@color/dark_gray"
+
+               />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:textSize="14dp"
+                android:padding="3dp"
+android:layout_gravity="center"
+                android:id="@+id/textTo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                 android:text="From"
+                android:textAppearance="@style/semiBold"
+                android:textColor="@color/dark_gray"
+               />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+</RelativeLayout>
+
+

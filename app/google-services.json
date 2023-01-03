@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "630227122288",
+    "firebase_url": "https://vadify-a050e.firebaseio.com",
+    "project_id": "vadify-a050e",
+    "storage_bucket": "vadify-a050e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630227122288:android:b37d1dc8761c7742b9dcb5",
+        "android_client_info": {
+          "package_name": "com.android.vadify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630227122288-u55jpel2t8odsjr4imonsjacufog8eb5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.android.vadify",
+            "certificate_hash": "470f38b880975a829169819a9e7994de8efbe3d1"
+          }
+        },
+        {
+          "client_id": "630227122288-ar7qg8071src2h6moq40gntdlkitrcv8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8NENkeXFSKT5w7ZJsh4fEz0lGyf_NT-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630227122288-ar7qg8071src2h6moq40gntdlkitrcv8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "630227122288-26jpp098s7b59e162lkm3fkgglvi2utr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.distribution.vadify"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:630227122288:android:232daa73662aa8ffb9dcb5",
+        "android_client_info": {
+          "package_name": "com.vadify"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "630227122288-ar7qg8071src2h6moq40gntdlkitrcv8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD8NENkeXFSKT5w7ZJsh4fEz0lGyf_NT-U"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "630227122288-ar7qg8071src2h6moq40gntdlkitrcv8.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "630227122288-26jpp098s7b59e162lkm3fkgglvi2utr.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.distribution.vadify"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

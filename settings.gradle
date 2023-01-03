@@ -1,0 +1,6 @@
+include ':library'
+include ':speech'
+include ':swipe-reveal-layout'
+include ':app'
+include ':ccp'
+rootProject.name='savery'

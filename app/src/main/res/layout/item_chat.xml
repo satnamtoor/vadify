@@ -1,0 +1,879 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tool="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.android.vadify.data.api.enums.MessageType" />
+
+        <import type="com.android.vadify.data.api.enums.DownloadUploadStatus" />
+
+        <import type="com.android.vadify.ui.util.DataConverterKt" />
+
+        <import type="android.text.TextUtils" />
+
+
+        <variable
+            name="position"
+            type="Integer" />
+
+        <variable
+            name="userId"
+            type="String" />
+
+        <variable
+            name="item"
+            type="com.android.vadify.data.db.chat.Chat" />
+
+        <variable
+            name="isToggleOn"
+            type="Boolean" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/textView48"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_8sdp"
+            app:cardBackgroundColor="@android:color/white"
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:visibleGone="@{DataConverterKt.checkIsDataEmpty(item.isdateVisible)}">
+
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/white"
+                android:padding="@dimen/_5sdp"
+                android:text="@{DataConverterKt.chatTimeConverter(item.isdateVisible)}"
+                android:textColor="@color/dark_sky"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+
+        <LinearLayout
+            android:id="@+id/parentContainerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_6sdp"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView48">
+
+            <LinearLayout
+                android:id="@+id/textView45"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_40sdp"
+                android:background="@drawable/ic_left_rectangle"
+                android:orientation="vertical"
+                android:padding="@dimen/_10sdp"
+                android:visibility="gone"
+                app:visibleGone="@{!userId.equalsIgnoreCase(item.from_id)}">
+
+                <com.google.android.material.textview.MaterialTextView
+                   android:visibility="gone"
+                    android:id="@+id/txtReceiverName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/regular"
+                    android:textColor="@color/light_blue"
+                    android:text="Forwarded"
+                    android:textSize="@dimen/_12ssp"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.forwarded}">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_12ssp"
+                        android:layout_height="@dimen/_12ssp"
+                        android:src="@drawable/arrow_forward" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Forwarded"
+                        android:textColor="#808080"
+                        android:textSize="@dimen/_9ssp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/reply_container_view_receiver"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@drawable/ic_reply_background"
+                    android:minWidth="@dimen/_200sdp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/reply_message_receiver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginTop="@dimen/_4sdp"
+                        android:layout_toRightOf="@id/reply_image_receiver"
+                        android:inputType="textFilter|textMultiLine"
+                        android:maxLines="1"
+                        android:textAppearance="@style/bold"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/reply_to_message_receiver"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/reply_message_receiver"
+                        android:layout_marginStart="@dimen/_4sdp"
+                        android:layout_marginBottom="@dimen/_4sdp"
+                        android:inputType="textFilter|textMultiLine"
+                        android:maxHeight="@dimen/_40sdp"
+                        android:maxLines="5"
+                        android:textAppearance="@style/regular"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_9ssp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/reply_image_receiver"
+                        android:layout_width="@dimen/_25sdp"
+                        android:layout_height="@dimen/_25sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_margin="@dimen/_4sdp"
+                        android:visibility="gone" />
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.DOCUMENT.value)}">
+
+                    <ProgressBar
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_vertical"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.IN_PROGRESS.value}" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/icon_file_doc"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.SUCCESS.value || item.downloadStatus == DownloadUploadStatus.NONE.value}" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/ic_reload"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.FAILED.value}" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:text="@{DataConverterKt.getFileName(item.url)}"
+                        android:textSize="@dimen/_12ssp" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.AUDIO.value)}">
+
+                    <ProgressBar
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_vertical"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.IN_PROGRESS.value}" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/receiver_pause_music"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_baseline_pause_circle_filled_24" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/receiver_play_music"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_receive_audio_play_icon"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.SUCCESS.value || item.downloadStatus == DownloadUploadStatus.NONE.value}" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/receiverRetry"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_reload"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.FAILED.value}" />
+
+
+                    <SeekBar
+                        android:id="@+id/receiver_seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center_vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/rlImageSend"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.IMAGE.value)}">
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:scaleType="fitXY"
+                        app:url="@{item.url}" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.VIDEO.value)}">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:scaleType="fitXY"
+                        app:url="@{item.url}" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_videoplay_icon"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.SUCCESS.value || item.downloadStatus == DownloadUploadStatus.NONE.value}" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_reload"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.FAILED.value}" />
+
+                    <androidx.core.widget.ContentLoadingProgressBar
+                        android:id="@+id/progressFileUploadReceiver"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:indeterminate="false"
+                        android:progressDrawable="@drawable/circular_progress_bar"
+                        android:background="@drawable/circle_shape"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.IN_PROGRESS.value}" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.LOCATION.value) }">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_map_address" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.CONTACT.value)}">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_chat_contact" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="@{item.contact_name.empty ? item.contact_number:item.contact_name}"
+                        android:textAppearance="@style/regular"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/materialTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:textAppearance="@style/regular"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:minWidth="@dimen/_200sdp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="@dimen/_150sdp"
+                        android:layout_height="wrap_content"
+                        android:text="@{DataConverterKt.dateConvert(item.createdAt)}"
+                        android:textAppearance="@style/regular"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_8ssp"
+                        app:layout_constraintStart_toStartOf="@+id/materialTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/receiver_timer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="end"
+                        android:textAppearance="@style/regular"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_8ssp"
+                        app:layout_constraintStart_toStartOf="@+id/materialTextView"
+                        app:layout_constraintTop_toBottomOf="@+id/materialTextView" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.CONTACT.value)}">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/receiver_contact_message"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/message"
+                        android:textColor="@color/blue"
+                        app:strokeColor="@android:color/transparent" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/receiver_contact_call"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:text="@string/call"
+                        android:textColor="@color/blue"
+                        app:strokeColor="@android:color/transparent" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/textView46"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_marginStart="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:layout_marginRight="@dimen/_15sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:background="@drawable/ic_right_rectangle"
+                android:orientation="vertical"
+                android:padding="@dimen/_5sdp"
+                android:visibility="gone"
+                app:visibleGone="@{userId.equalsIgnoreCase(item.from_id)}">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/_4sdp"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.forwarded}">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_12ssp"
+                        android:layout_height="@dimen/_12ssp"
+                        android:src="@drawable/arrow_forward" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Forwarded"
+                        android:textColor="#808080"
+                        android:textSize="@dimen/_9ssp"
+                        android:textStyle="italic" />
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:id="@+id/reply_container_view_sender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_2sdp"
+                    android:layout_marginEnd="@dimen/_2sdp"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:background="@drawable/ic_reply_background"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_height="wrap_content"
+                        android:layout_width="wrap_content"
+                        android:weightSum="1"
+                        >
+                        <RelativeLayout
+                            android:layout_weight=".4"
+                            android:layout_height="wrap_content"
+                            android:layout_width="wrap_content"
+                            >
+                            <com.google.android.material.textview.MaterialTextView
+
+                                android:id="@+id/reply_message_sender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginStart="@dimen/_4sdp"
+                                android:layout_marginTop="@dimen/_4sdp"
+                                android:inputType="textFilter|textMultiLine"
+
+                                android:maxLines="1"
+                                android:textAppearance="@style/bold"
+                                android:textColor="@color/black"
+
+                                android:textSize="@dimen/_10ssp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <com.google.android.material.textview.MaterialTextView
+
+                                android:id="@+id/reply_to_message_sender"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/reply_message_sender"
+                                android:layout_alignParentLeft="true"
+                                android:layout_marginStart="@dimen/_4sdp"
+                                android:layout_marginBottom="@dimen/_4sdp"
+
+                                android:inputType="textFilter|textMultiLine"
+                                android:maxHeight="@dimen/_40sdp"
+                                android:maxLines="5"
+                                android:textAppearance="@style/regular"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="@dimen/_9ssp" />
+                        </RelativeLayout>
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_gravity="center"
+                            android:layout_weight=".6"
+                            android:id="@+id/reply_image_sender"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_margin="@dimen/_4sdp"
+                            android:layout_alignParentRight="true"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.DOCUMENT.value)}">
+
+                    <ProgressBar
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_vertical"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.IN_PROGRESS.value}" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/icon_file_doc"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.SUCCESS.value || item.downloadStatus == DownloadUploadStatus.NONE.value}" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_vertical"
+                        app:srcCompat="@drawable/ic_reload"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.FAILED.value}" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:ellipsize="end"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingEnd="@dimen/_10sdp"
+                        android:text="@{DataConverterKt.getFileName(item.url)}" />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.AUDIO.value)}">
+
+                    <ProgressBar
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_vertical"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.IN_PROGRESS.value}" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/pause_music"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_baseline_pause_circle_filled_24" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/play_music"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_audio_play_icon"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.SUCCESS.value || item.downloadStatus == DownloadUploadStatus.NONE.value}" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/retryMusic"
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center_vertical"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:paddingEnd="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_reload"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.FAILED.value}" />
+
+
+                    <SeekBar
+                        android:id="@+id/seekBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center_vertical"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </LinearLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/rlImageRec"
+
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.IMAGE.value) }">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:scaleType="fitXY"
+                        app:url="@{item.url}" />
+
+                    <ProgressBar
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.IN_PROGRESS.value}" />
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.VIDEO.value)}">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:scaleType="fitXY"
+                        app:url="@{item.url}" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_reload"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.FAILED.value}" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_videoplay_icon"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.SUCCESS.value || item.downloadStatus == DownloadUploadStatus.NONE.value}" />
+
+                    <androidx.core.widget.ContentLoadingProgressBar
+                        android:id="@+id/progressFileUpload"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:indeterminate="false"
+                        android:progressDrawable="@drawable/circular_progress_bar"
+                        android:background="@drawable/circle_shape"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:layout_centerInParent="true"
+                        android:max="100"
+                        app:visibleGone="@{item.downloadStatus == DownloadUploadStatus.IN_PROGRESS.value}" />
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.LOCATION.value) }">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_80sdp"
+                        android:scaleType="fitCenter"
+                        app:srcCompat="@drawable/ic_map_address" />
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="@dimen/_200sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.CONTACT.value)}">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:padding="@dimen/_5sdp"
+                        app:srcCompat="@drawable/ic_chat_contact" />
+
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_30sdp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical"
+                        android:paddingStart="@dimen/_5sdp"
+                        android:text="@{item.contact_name.empty ? item.contact_number:item.contact_name}"
+                        android:textAppearance="@style/regular"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                </LinearLayout>
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/message_sender"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_35sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:textAppearance="@style/regular"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_12ssp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <LinearLayout
+                    android:id="@+id/time_container_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/created_at"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="left"
+                        android:lines="1"
+                        android:minWidth="@dimen/_20sdp"
+                        android:text="@{DataConverterKt.dateConvert(item.createdAt)}"
+                        android:textAppearance="@style/regular"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/timer"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textAlignment="textEnd"
+                        android:textAppearance="@style/regular"
+                        android:textColor="@color/light_blue"
+                        android:textSize="@dimen/_8ssp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/timer1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="end"
+                        android:minWidth="@dimen/_20sdp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    app:visibleGone="@{item.type.equalsIgnoreCase(MessageType.CONTACT.value)}">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/contact_message"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/message"
+                        android:textColor="@color/blue"
+                        app:strokeColor="@android:color/transparent" />
+
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/contact_call"
+                        style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:text="@string/call"
+                        android:textColor="@color/blue"
+                        app:strokeColor="@android:color/transparent" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

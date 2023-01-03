@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        tools:context=".ui.dashboard.fragment.chat.ChatFragment">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary">
+
+                <LinearLayout
+                    android:weightSum="1"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_height="match_parent">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                      android:layout_weight=".40"
+                       android:layout_marginLeft="@dimen/_10sdp"
+                        android:id="@+id/textView2"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:text="@string/Chat"
+                        android:textAppearance="@style/semiBold"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="@dimen/_12ssp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_marginTop="@dimen/_5sdp"
+                       android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_gravity="center"
+                        android:layout_weight=".20"
+                        android:id="@+id/cardView10"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        app:cardCornerRadius="@dimen/_6sdp"
+                        app:cardElevation="@dimen/_3sdp"
+                      >
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/searchText"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:hint="@string/search"
+                            android:background="@null"
+                            android:paddingLeft="@dimen/_12sdp"
+                            android:paddingRight="@dimen/_12sdp"
+                            android:paddingBottom="0dp"
+                            android:gravity="center_vertical"
+                            android:layout_gravity="center_vertical"
+                            android:imeOptions="actionDone"
+                            android:inputType="text"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toEndOf="@+id/textInputEditText"
+                            app:layout_constraintTop_toBottomOf="@+id/textView39"
+                            android:drawableEnd="@drawable/ic_search_icon" />
+                    </androidx.cardview.widget.CardView>
+
+                    <ImageView
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_weight=".40"
+                        android:visibility="visible"
+
+                        android:layout_width="match_parent"
+                        android:layout_height="24dp"
+                        android:layout_gravity="right|center"
+                        android:id="@+id/addGroup"
+                        android:src="@drawable/ic_add"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignParentRight="true" />
+
+
+                </LinearLayout>
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:paddingEnd="@dimen/_12sdp"
+            android:paddingStart="0dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+            <com.sdi.joyersmajorplatform.widget.EmptyRecyclerView
+                android:id="@+id/userList"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                tools:listitem="@layout/item_user_list"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/command_container"
+            />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

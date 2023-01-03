@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_chat">
+
+    <fragment
+        android:id="@+id/navigation_camera"
+        android:name="com.android.vadify.ui.dashboard.fragment.camera.CameraFragment"
+        android:label="@string/Camera"
+        tools:layout="@layout/fragment_camera" />
+
+    <fragment
+        android:id="@+id/navigation_chat"
+        android:name="com.android.vadify.ui.dashboard.fragment.chat.ChatFragment"
+        android:label="@string/Chat"
+        tools:layout="@layout/fragment_chat" />
+
+    <fragment
+        android:id="@+id/navigation_setting"
+        android:name="com.android.vadify.ui.dashboard.fragment.setting.SettingFragment"
+        android:label="@string/Settings"
+        tools:layout="@layout/fragment_setting" />
+    <fragment
+        android:id="@+id/navigation_call"
+        tools:layout="@layout/fragment_call"
+        android:name="com.android.vadify.ui.dashboard.fragment.call.CallFragment"
+        android:label="CallFragment" >
+    <argument
+        android:name="ACTIVITY_TYPE"
+        app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/vadifyFriendFragment"
+        android:name="com.android.vadify.ui.dashboard.fragment.vadifyfriend.VadifyFriendFragment"
+        tools:layout="@layout/fragment_vadify_friend"
+        android:label="VadifyFriendFragment" />
+
+
+</navigation>

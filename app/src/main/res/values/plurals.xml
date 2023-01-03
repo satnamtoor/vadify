@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <plurals name="blockedContent">
+        <item quantity="one">Portion %d Left</item>
+        <item quantity="other">Portion %d +Left</item>
+    </plurals>
+
+</resources>

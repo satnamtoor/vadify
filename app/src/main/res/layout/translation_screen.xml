@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <data>
+
+        <variable
+            name="item"
+            type="com.android.vadify.ui.Translation" />
+
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:navigationIcon="@drawable/ic_arrow">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="?attr/actionBarSize"
+                    android:layout_marginRight="?attr/actionBarSize"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="Translate Now"
+                    android:textAppearance="@style/semiBold"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+
+                <ImageView
+                    android:id="@+id/remove"
+                    android:layout_width="28dp"
+                    android:layout_height="28dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_gravity="right|center"
+                    android:layout_marginRight="@dimen/_10sdp"
+                    android:src="@drawable/ic_trash"
+                    android:visibility="visible" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ln"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+
+                    <com.hbb20.CountryCodePicker
+
+                        android:id="@+id/countryLanguageSelectedFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/drop_down"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:singleLine="true"
+                        app:ccp_autoDetectCountry="false"
+                        app:ccp_defaultNameCode="us"
+
+                        app:ccp_showPhoneCode="false"
+                        app:ccp_textGravity="LEFT"
+                        app:ccp_textSize="@dimen/_12sdp"
+                         />
+
+
+                    <TextView
+                        android:id="@+id/selected_langFrom"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_5sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+
+                        android:layout_toRightOf="@id/countryLanguageSelectedFrom"
+                        android:text="EN"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_25sdp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/down_arrow" />
+
+
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_10sdp">
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/countryLanguageSelectedTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/white"
+                        android:cursorVisible="false"
+                        android:drawableEnd="@drawable/drop_down"
+                        android:ellipsize="end"
+                        android:focusable="false"
+                        android:focusableInTouchMode="true"
+                        android:inputType="text"
+                        android:longClickable="false"
+                        android:paddingEnd="@dimen/_8sdp"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:singleLine="true"
+                        app:ccp_autoDetectCountry="false"
+                        app:ccp_defaultNameCode="us"
+                        app:ccp_showPhoneCode="false"
+                        app:ccp_textGravity="LEFT"
+                        app:ccp_textSize="@dimen/_12sdp" />
+
+                    <TextView
+                        android:layout_toRightOf="@id/countryLanguageSelectedTo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/selected_lang_to"
+                        android:text="EN"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_12sdp"
+
+                        />
+
+
+                </RelativeLayout>
+
+
+            </LinearLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/chatListTrans"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_above="@+id/listening_layout"
+                android:layout_below="@+id/ln"
+                android:clipToPadding="false"
+                android:descendantFocusability="afterDescendants"
+                android:listSelector="@android:color/transparent"
+                android:paddingTop="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_8sdp"
+                android:scrollbars="none"
+                android:layout_margin="@dimen/_10sdp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:reverseLayout="true" />
+
+
+            <LinearLayout
+                android:id="@+id/listening_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal">
+
+
+                <RelativeLayout
+                    android:id="@+id/listeningMicTrans"
+                    android:layout_width="@dimen/_40sdp"
+                    android:layout_height="match_parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/micTrans"
+                        android:layout_width="@dimen/_15sdp"
+                        android:layout_height="@dimen/_32sdp"
+                        android:layout_centerInParent="true"
+                        app:srcCompat="@drawable/ic_mic_red" />
+
+
+                </RelativeLayout>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="12dp"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    android:layout_marginBottom="12dp"
+                    android:layout_weight="1"
+                    app:cardCornerRadius="@dimen/_6sdp"
+                    app:cardElevation="@dimen/_3sdp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toStartOf="@+id/cameraView"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/plusBtn"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <com.google.android.material.textfield.TextInputEditText
+
+                        android:id="@+id/listening_inputTrans"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:background="@null"
+                        android:gravity="center_vertical"
+                        android:hint="@string/start_talking_i_m_listening"
+                        android:imeOptions="actionDone"
+                        android:inputType="textMultiLine"
+                        android:layoutDirection="ltr"
+                        android:maxHeight="@dimen/_40sdp"
+                        android:maxLength="1000000"
+                        android:maxLines="7"
+                        android:minHeight="@dimen/_40sdp"
+                        android:paddingLeft="@dimen/_12sdp"
+                        android:paddingRight="@dimen/_12sdp"
+                        android:paddingBottom="0dp"
+                        android:textDirection="ltr"
+                        android:textSize="@dimen/_12ssp" />
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/sendListeningData"
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="16dp"
+                    android:layout_marginRight="16dp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="@dimen/_3sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardView10"
+                    app:layout_constraintEnd_toStartOf="@+id/cardView12"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cardView10"
+                    app:layout_constraintTop_toTopOf="@+id/cardView10">
+
+
+                    <RelativeLayout
+                        android:id="@+id/sendMessage"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            app:srcCompat="@drawable/ic_send" />
+                    </RelativeLayout>
+
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.material.card.MaterialCardView
+                    android:layout_width="@dimen/_30sdp"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="@dimen/_12sdp"
+                    android:layout_marginRight="@dimen/_12sdp"
+                    app:cardCornerRadius="@dimen/_15sdp"
+                    app:cardElevation="@dimen/_3sdp"
+                    app:layout_constraintBottom_toBottomOf="@+id/cardView10"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/cameraView"
+                    app:layout_constraintTop_toTopOf="@+id/cardView10">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/listenerCancelTrans"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:background="@drawable/ic_more"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                </com.google.android.material.card.MaterialCardView>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+</layout>

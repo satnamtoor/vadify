@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <import type="com.android.vadify.ui.util.DataConverterKt" />
+
+        <import type="com.android.vadify.data.api.enums.GroupPermission" />
+
+        <variable
+            name="vm"
+            type="com.android.vadify.ui.dashboard.viewmodel.EditMyAccountViewModel" />
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                app:navigationIcon="@drawable/ic_arrow"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/edit_my_account"
+                    android:layout_marginRight="?attr/actionBarSize"
+                    android:textAppearance="@style/semiBold"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    android:layout_marginEnd="?attr/actionBarSize" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/appBar">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView14"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:text="@string/privacy"
+
+                            android:textAppearance="@style/semiBold"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView15"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_6sdp"
+                            android:text="@string/who_can_add_me_to_group"
+                            android:textAppearance="@style/regular"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toStartOf="@+id/view"
+                            app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+                        <View
+                            android:id="@+id/view"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:background="@color/border_color"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView14"
+                            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/everyOneCheckBox"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_24sdp"
+                            android:layout_marginEnd="@dimen/_16sdp"
+                            android:button="@null"
+                            android:checked="@{vm.groupPermissionFilter == GroupPermission.EVERYONE.value}"
+                            android:drawableEnd="@drawable/ic_check_selector"
+                            android:onClick="@{(view) -> vm.updateEveryOne()}"
+                            android:text="@string/everyone"
+                            android:textAppearance="@style/regular"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView15"
+                            app:layout_constraintTop_toBottomOf="@+id/textView15" />
+
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:button="@null"
+                            android:checked="@{vm.groupPermissionFilter == GroupPermission.MY_CONTACTS.value}"
+                            android:drawableEnd="@drawable/ic_check_selector"
+                            android:gravity="top"
+                            android:onClick="@{(view) -> vm.updateMyContact()}"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:text="@string/my_contacts"
+                            android:textAppearance="@style/regular"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/everyOneCheckBox"
+                            app:layout_constraintStart_toStartOf="@+id/everyOneCheckBox"
+                            app:layout_constraintTop_toBottomOf="@+id/everyOneCheckBox" />
+
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/livelocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:background="@drawable/ic_switch_selector"
+                            android:button="@null"
+                            android:checked="@={vm.shareLiveLocation}"
+                            android:onCheckedChanged="@{(compoundButton,checked) -> vm.updateLiveLocation(checked)}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView16"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:text="@string/live_location_share"
+                            android:textAppearance="@style/regular"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/livelocation"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/livelocation"
+                            app:layout_constraintVertical_bias="0.45" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    android:visibility="gone"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView20"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/show_security_notifications"
+                            android:textAppearance="@style/regular"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="@+id/notification"
+                            app:layout_constraintStart_toStartOf="@+id/view3"
+                            app:layout_constraintTop_toTopOf="@+id/notification"
+                            app:layout_constraintVertical_bias="0.45" />
+
+
+                        <View
+                            android:id="@+id/view3"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_9sdp"
+                            android:background="@color/border_color"
+                            app:layout_constraintEnd_toEndOf="@+id/textView19"
+                            app:layout_constraintStart_toStartOf="@+id/textView19"
+                            app:layout_constraintTop_toBottomOf="@+id/textView19" />
+
+                        <com.google.android.material.checkbox.MaterialCheckBox
+                            android:id="@+id/notification"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginBottom="@dimen/_6sdp"
+                            android:background="@drawable/ic_switch_selector"
+                            android:button="@null"
+                            android:checked="@={vm.securityNotification}"
+                            android:onCheckedChanged="@{(compoundButton,checked) -> vm.updateSecurityPermission(checked)}"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintEnd_toEndOf="@+id/view3"
+                            app:layout_constraintTop_toBottomOf="@+id/view3" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView18"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:text="@string/privacy"
+                            android:textAppearance="@style/semiBold"
+                            android:textColor="@android:color/black"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView19"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_9sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:text="@string/dummy_message"
+                            android:textAppearance="@style/regular"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/view2"
+                            app:layout_constraintTop_toBottomOf="@+id/view2" />
+
+                        <View
+                            android:id="@+id/view2"
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:background="@color/border_color"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView18"
+                            app:layout_constraintTop_toBottomOf="@+id/textView18" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+
+                        android:visibility="gone"
+                        android:id="@+id/changePassword"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/switch6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:rotation="270"
+                            app:layout_constraintBottom_toBottomOf="@+id/textView27"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/textView22"
+                            app:srcCompat="@drawable/drop_down" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_12sdp"
+                            android:text="@string/change_phone_number"
+                            android:textAppearance="@style/regular"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toTopOf="@+id/textView27"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintVertical_chainStyle="packed" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/textView27"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_12sdp"
+                            android:text="@{vm.phoneNumber}"
+                            android:textAppearance="@style/regular"
+                            android:textColor="@color/blue"
+                            android:textSize="@dimen/_10ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="@+id/textView22"
+                            app:layout_constraintTop_toBottomOf="@+id/textView22" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:id="@+id/blockedContact"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:rotation="270"
+                            app:layout_constraintBottom_toBottomOf="@+id/appCompatTextView3"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/appCompatTextView3"
+                            app:srcCompat="@drawable/drop_down" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/appCompatTextView3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginLeft="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_19sdp"
+                            android:layout_marginBottom="@dimen/_19sdp"
+                            android:text="@{DataConverterKt.blockedUser(vm.numberOfBlockUser)}"
+                            android:textAppearance="@style/regular"
+                            android:textColor="@color/red_color"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+
+                    android:id="@+id/logoutBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_16sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:layout_marginRight="@dimen/_16sdp"
+                    android:layout_marginBottom="@dimen/_20sdp"
+                    app:cardCornerRadius="@dimen/_12sdp"
+                    app:cardElevation="@dimen/_8sdp">
+
+                    <androidx.constraintlayout.widget.ConstraintLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/_12sdp"
+                            android:layout_marginRight="@dimen/_12sdp"
+                            android:rotation="270"
+                            app:layout_constraintBottom_toBottomOf="@+id/delete_label"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toTopOf="@+id/delete_label"
+                            app:srcCompat="@drawable/drop_down" />
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/delete_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_18sdp"
+                            android:layout_marginBottom="@dimen/_18sdp"
+                            android:text="@string/sign_out"
+                            android:textAppearance="@style/regular"
+                            android:textColor="@color/red_color"
+                            android:textSize="@dimen/_12ssp"
+                            app:layout_constraintBottom_toBottomOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+                    </androidx.constraintlayout.widget.ConstraintLayout>
+
+                </androidx.cardview.widget.CardView>
+            </LinearLayout>
+        </ScrollView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

@@ -1,0 +1,27 @@
+-- Merging decision tree log ---
+manifest
+ADDED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml:1:1-7:12
+INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml:1:1-7:12
+	package
+		ADDED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml:1:11-47
+		INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+		INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+	xmlns:android
+		ADDED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml:1:1-7:12
+application
+ADDED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml:3:5-5:19
+uses-sdk
+INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+		ADDED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+		INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+		ADDED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml
+		INJECTED from E:\upwork\rovy\Code\28-1-22\Vadify\library\src\main\AndroidManifest.xml

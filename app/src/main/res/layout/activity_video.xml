@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data>
+
+        <import type="com.android.vadify.ui.util.DataConverterKt" />
+
+        <import type="com.android.vadify.data.api.enums.CallType" />
+
+        <variable
+            name="vm"
+            type="com.android.vadify.ui.chat.call.viewmodel.CallViewModel" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/call_background_blue_gradient"
+        android:keepScreenOn="true"
+        android:orientation="vertical">
+
+        <com.google.android.material.appbar.AppBarLayout
+
+            android:id="@+id/appBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="?attr/colorPrimary"
+                app:navigationIcon="@drawable/ic_arrow">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="?attr/actionBarSize"
+                    android:gravity="bottom|center_horizontal"
+                    android:text="@string/end_to_end_encrypted"
+                    android:textAppearance="@style/semiBold"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="@dimen/_13ssp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.appcompat.widget.Toolbar>
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <GridLayout
+            android:layout_below="@id/appBar"
+            android:id="@+id/videoContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+           />
+
+        <!--<com.twilio.video.VideoView
+            android:visibility="visible"
+            android:id="@+id/primary_video_view1"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"/>
+
+        <com.twilio.video.VideoView
+            android:visibility="visible"
+            android:id="@+id/primary_video_view2"
+            android:layout_width="200dp"
+            android:layout_toRightOf="@id/primary_video_view1"
+            android:layout_height="wrap_content"/>
+-->
+        <!--        <androidx.recyclerview.widget.RecyclerView-->
+        <!--            android:id="@+id/video_container"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/appBar"-->
+        <!--            tools:listitem="@layout/item_video"-->
+        <!--            />-->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/appBar"
+            android:id="@+id/name_dp_container"
+            >
+
+            <com.google.android.material.textview.MaterialTextView
+
+                android:id="@+id/text_calling"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@{vm.usersName}"
+                android:textAppearance="@style/semiBold"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14ssp" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView52"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/text_calling"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_12sdp"
+                android:text="@{vm.callStatus.value}"
+                android:textAppearance="@style/semiBold"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_14ssp" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView52"
+                android:layout_centerHorizontal="true">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/imageView26"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginTop="@dimen/_16sdp"
+                    android:background="@drawable/button_white_border"
+                    app:layout_constraintEnd_toStartOf="@+id/imageView27"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/blue_circle"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:text="@{DataConverterKt.getAlphabetCharacter(vm.senderName)}"
+                        android:textAppearance="@style/semiBold"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:goneVisible="@{vm.senderImage.empty}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:url="@{vm.senderImage}" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/imageView27"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="@dimen/_50sdp"
+                    android:layout_marginStart="@dimen/_24sdp"
+                    android:background="@drawable/button_white_border"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageView26"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="0.5"
+                    app:layout_constraintStart_toEndOf="@+id/imageView26"
+                    app:layout_constraintTop_toTopOf="@+id/imageView26">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/_5sdp"
+                        android:background="@drawable/blue_circle"
+                        android:gravity="center"
+                        android:maxLength="2"
+                        android:paddingBottom="@dimen/_2sdp"
+                        android:text="@{DataConverterKt.getAlphabetCharacter(vm.receiverName)}"
+                        android:textAppearance="@style/semiBold"
+                        android:textColor="@android:color/white"
+                        android:textSize="@dimen/_10ssp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="0dp"
+                        android:layout_height="0dp"
+                        android:layout_margin="@dimen/_5sdp"
+                        app:goneVisible="@{vm.receiverImage.empty}"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:url="@{vm.receiverImage}" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+        <FrameLayout
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:id="@+id/secondcamera"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginRight="@dimen/_25sdp">
+
+            <com.twilio.video.VideoView
+
+                android:id="@+id/thumbnail_video_view"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:layout_gravity="bottom|start"
+                android:visibility="visible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/buttonLayout"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:tviMirror="true"
+                app:tviOverlaySurface="true" />
+        </FrameLayout>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:id="@+id/video_controller"
+            >
+            <FrameLayout
+                android:id="@+id/framButtons"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_20sdp"
+                    android:weightSum="1">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/volumeBtn"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginRight="@dimen/_25sdp"
+                        android:layout_weight=".5"
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:srcCompat="@drawable/ic_camera_flip" />
+
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/muteBtn"
+                        android:layout_width="@dimen/_40sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginLeft="@dimen/_25sdp"
+                        android:layout_weight=".5"
+
+                        app:cardCornerRadius="@dimen/_20sdp"
+                        app:cardElevation="@dimen/_3sdp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/imageView22"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            app:src="@{vm.muteUnmuteDrawable}"
+                            tools:layout_editor_absoluteX="317dp"
+                            tools:layout_editor_absoluteY="571dp" />
+
+                    </androidx.cardview.widget.CardView>
+                </LinearLayout>
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/frBottom"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                >
+
+                <LinearLayout
+                    android:id="@+id/buttonLayout"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="10dp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/disConnectCall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_call_off"
+                        app:visibleGone="@{vm.isCallConnected == CallType.RECEIVER || vm.isCallConnected == CallType.CONNECTED || vm.isCallConnected == CallType.SENDER }" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/callConnect"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/_10sdp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/ic_call_on"
+                      />
+
+                </LinearLayout>
+            </FrameLayout>
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </RelativeLayout>
+
+</layout>
